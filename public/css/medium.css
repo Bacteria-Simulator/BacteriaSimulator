@@ -1,0 +1,101 @@
+/*medium: min 992px*/
+
+.shield-mobile{
+	display: none;
+}
+
+.side-nav{
+	float: right;
+}
+.vt-bio .side-nav{
+	float: none;
+}
+
+
+
+.share-links a{
+    float: right;
+}
+
+/*article page*/
+/*.share-links a{
+    border-right: 2px solid rgb(153, 153, 153);
+}
+
+.share-links a:last-child{
+    border-left: 2px solid rgb(153, 153, 153);
+}
+*/
+
+
+/*justifies first children in the right column to the top of the grid*/
+/*#vt-general #vt_right_col.with-hidden-side-nav h1:first-child, 
+#vt-general #vt_right_col.with-hidden-side-nav .iparys_inherite h1:first-child 
+{
+	margin-top: -15px;
+}
+
+#vt-general #vt_right_col.with-hidden-side-nav h2:first-child,
+#vt-general #vt_right_col.with-hidden-side-nav .iparys_inherited h2:first-child{
+
+	margin-top: -7px;
+}
+
+#vt-general #vt_right_col.with-hidden-side-nav .reference h2:first-child,
+#vt-general #vt_right_col.with-hidden-side-nav .iparys_inherited .reference h2:first-child{
+
+	margin-top: -7px;
+}
+
+#vt-general #vt_right_col.with-hidden-side-nav h3:first-child,
+#vt-general #vt_right_col.with-hidden-side-nav .iparys_inherited h3:first-child{
+	margin-top: -5px;
+
+}
+
+#vt-general #vt_right_col.with-hidden-side-nav h4:first-child,
+#vt-general #vt_right_col.with-hidden-side-nav .iparys_inherited h4:first-child{
+	margin-top: -5px;
+
+}
+
+#vt-general #vt_right_col.with-hidden-side-nav h5:first-child,
+#vt-general #vt_right_col.with-hidden-side-nav .iparys_inherited h5:first-child{
+	margin-top: -3px;
+
+}
+
+#vt-general #vt_right_col.with-hidden-side-nav p:first-child,
+#vt-general #vt_right_col.with-hidden-side-nav .iparys_inherited p:first-child{
+	margin-top: -9px;
+
+}
+
+#vt-general #vt_right_col.with-hidden-side-nav ul:first-child,
+#vt-general #vt_right_col.with-hidden-side-nav .iparys_inherited ul:first-child{
+	margin-top: -10px;
+
+}
+
+#vt-general #vt_right_col.with-hidden-side-nav .vt_feed_content:first-child,
+#vt-general #vt_right_col.with-hidden-side-nav .iparys_inherited .vt_feed_content:first-child{
+	margin-top: -28px;
+
+}*/
+
+.flypanels-content .container {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.navbar-nav {
+    margin-left: 80px;
+}
+
+.shield{
+	left: 37px;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}

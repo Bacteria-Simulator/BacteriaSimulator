@@ -1,0 +1,153 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+p
+{
+}
+
+/*font for title*/
+.title 
+{
+  font-size: 84px;
+  text-align: center;
+}
+
+/**/
+#header
+{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 2px solid #861F41;
+  z-index: 1;
+
+}
+
+
+
+ /* Add a background color to the top navigation */
+.topnav
+{
+  background-color: #FFFFFF;
+  overflow: hidden;
+  color: #861F41;
+  text-align: center;
+  top: 0;
+  position: sticky;
+  z-index: 1;
+  
+}
+
+
+
+/* Style the links inside the navigation bar */
+.topnav a 
+{
+  float: none;
+  display: inline-block;
+  color: #861F41; /*text color*/
+  text-align: center;
+  padding: 14px 16px;  
+  font-size: 17px;
+  border-right: solid #E87722;
+  width: auto;
+}
+
+
+/* Change the color of links on hover */
+.topnav a:hover 
+{
+    background: #861F41;/*tab color*/
+    color: #FFFFFF; /*text color*/
+}
+
+/* Add an active class to highlight the current page */
+.active 
+{
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon 
+{
+    display: none;
+} 
+
+ /* When the screen is less than 500 pixels wide, hide all links, except
+  for the first one ("Home"). Show the link that contains should open and
+  close the topnav (.icon) */
+@media screen and (max-width: 500px)
+ {
+  .topnav a {display: none;}
+  
+  .topnav a.icon 
+  {
+    float: right;
+    display: block;
+  }
+
+}
+
+/* The "responsive" class is added to the topnav with JavaScript 
+when the user clicks on the icon. This class makes the topnav look good 
+on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 500px) 
+{
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon 
+  {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a 
+  {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  #header
+  {
+    height: auto;
+  }
+}
+
+
+
+/**/
+.navbar-toggle
+{
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/**/
+select.form-control:not([size]):not([multiple]) 
+{
+  height: auto;
+}
+
+/**/
+.container
+{
+  font-size: 14px;
+
+}
+/**/
+.form-group
+{
+  color: #861F41; 
+}

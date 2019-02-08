@@ -1,0 +1,176 @@
+/*home only*/
+
+.navbar{
+	margin-bottom:0px;
+}
+
+
+.vt-home .flypanels-container .flypanels-main{
+	background-color: transparent;
+}
+
+/*removes border when scrolled*/
+.vt-home .navbar-sticky{
+	border-top: none;
+}
+
+.featured-content-container{
+	overflow: hidden;
+	position: relative;
+}
+
+.featured-content-container img{
+	z-index: -10;
+	overflow: hidden
+}
+
+.secondary-content-container{
+	background-color: #fff;
+	padding: 30px;
+    margin-top: 30px;
+}
+
+.featured-content-container .vt-carousel h3 {
+    font-size: 40px;
+    margin-left: -4px;
+    font-weight: 300;
+    color: #FFF;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.featured-content-container .vt-carousel p {
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media (max-width: 767px){
+.featured-content-container .vt-carousel p{
+    padding-left: 0px;
+    margin-bottom: 10px;
+}
+}
+
+/*overrides 30 px margin*/
+.featured-content-container .container{
+	margin-bottom: 0px;
+}
+
+.featured-content-container .gallery-featured-item h3,
+.featured-content-container .gallery-featured-item p,
+.featured-content-container .gallery-featured-item a
+{
+    color:#fff;
+}
+.featured-content-container .gallery-featured-item img{
+    width: 100%;
+}
+
+@media (min-width: 1200px){
+.featured-content-container .carousel-caption .container, 
+.featured-content-container .vt-carousel-control-belowImage .container
+{
+    width: 1170px;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+.featured-content-container .carousel-caption .container, 
+.featured-content-container .vt-carousel-control-belowImage .container
+{
+    width: 970px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+.featured-content-container .carousel-caption .container, 
+.featured-content-container .vt-carousel-control-belowImage .container
+{
+    width: 750px;
+}
+}
+
+/*gradient on featured image to make text readable*/
+.featured-content-container .carousel-caption {
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    padding-bottom: 50px;
+    text-shadow: 2px 2px #333;
+    background: rgba(0,0,0,.5); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(transparent, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(transparent, black); /* Standard syntax (must be last) */
+}
+
+/*if controls are hidden, lower the padding bottom*/
+.featured-content-container .carousel-caption.vt-control-type-hidden {
+    padding-bottom: 18px;
+}
+
+@media (max-width: 768px){
+.featured-content-container .carousel-caption{
+    background: transparent;
+}
+}
+
+.featured-content-container .carousel-inner .item-image{
+    max-height: 500px;
+}
+
+/*overrides alignment set for carousel in body*/
+.featured-content-container .carousel-caption.left.vt-control-type-belowImage{
+    left: 0;
+}
+
+/*eliminates bounce with sticky nav*/
+@media (min-width: 768px){
+
+.vt-home .content-sticky {
+    padding-top: 0px;
+}
+
+
+}
+
+/*justifies heading to the left in mobile*/
+@media (max-width: 767px){
+.featured-content-container .vt-carousel h3 {
+    padding-left: 0px;
+    font-size: 30px;
+}
+}
+
+
+/*styles for search page*/
+.vt-search .page-title h1{
+    display: none;
+}
+
+.vt-search .page-title{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.vt-search #vt_right_col .parbase.text{
+    margin-bottom: 15px;
+}
+
+.vt-search .page-title h2{
+    border-bottom: 2px solid #999999;
+    padding-bottom: 30px;
+}
+
+.vt-search .vtnews-tag-results-list li.item{
+    padding-left: 0px;
+    margin-left: 15px;
+}
+.vt-search .vtnews-tag-results-list li.item:hover{
+    background-color: rgba(0,0,0,0.055);
+}
+
+
+

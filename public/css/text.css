@@ -1,0 +1,447 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+/*navigation text*/
+.navbar, .navbar .dropdown-menu, .flypanels-treemenu li a, .moss-search-box, #vt_side_nav p, body #vt_side_nav a {
+    font-size: 15px;
+    font-family: "PT Sans",sans-serif;
+    font-weight: 300;
+}
+
+/*Color of navigation links*/
+.navbar-default .navbar-nav > li > a
+{
+    color: #fff;
+}
+
+/*rollover color for navigation links*/
+.navbar-default .navbar-nav > li:hover > a,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a.open{
+    color: #333;
+}
+
+.dropdown a{
+    color: #333;
+}
+
+
+.moss-search-box {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    color: #000;
+}
+
+.moss-search-button {
+    color: #FFF;
+    font-size: 17px;
+}
+
+#vt_side_nav a{
+    color: #333;
+}
+
+p, .vt-rawhtml a{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+
+
+p, .general-body li, .vt-bio main li{
+    /* line-height: 30px; */
+    line-height: 1.8;
+}
+
+ 
+ #vt_body_col li, 
+ .vt-left-col li, 
+ #vt_right_col li, 
+ .vt-bio main li, 
+ #vt_article_authors li,
+ #vt_article_locations li
+
+ {
+    font-family: 'Lato', sans-serif;
+     line-height: 1.8;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+h1.vt_bioTitle {
+    margin-bottom: 0;
+}
+
+.vt-list-title{
+    
+    font-family: 'Lato', sans-serif;
+    /* line-height: 30px; */
+     line-height: 1.8;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#vt_side_nav p{
+    /* line-height: 20px; */
+     line-height: 1.8;
+
+}
+
+h1, h2, h3, h4, h5
+{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    margin-left: -6px;
+}
+
+@media (max-width: 767px){
+
+h1{
+    font-size: 40px;
+}
+}
+
+h2{
+    font-size: 35px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+h4{
+    font-size: 20px;
+}
+
+h5{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+h2.vt-ref-title{
+    font-size: 25px;
+    padding-bottom: 25px;
+}
+
+.department-name {
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 1.0;
+}
+
+.department-name a,
+.department-name a:active,
+.department-name a:hover,
+.department-name a:focus {
+    color: #FFF;
+}
+
+.vt-home .home-content h1{
+    margin-top: 0px;
+}
+
+/*breadcrumbs*/
+.gateway .moss-breadcrumbs a{
+    font-family: "PT Sans",sans-serif;
+    font-size: 15px;
+    text-transform: none;
+    color: #7A0000;
+}
+
+.gateway .moss-breadcrumbs a:last-child{
+    color: #557082;
+}
+
+.breadcrumb-slash{
+    color: #7A0000;
+    font-size: 15px;
+}
+
+/*links*/
+a {
+    color: #660000;
+}
+
+a:focus, a:hover{
+    color: #557082;
+}
+
+/* adds spacing to accommodate sticky nav when scrolling to in-page anchor */
+a.textAnchor {
+    display: block;
+    position: relative;
+    top: -120px;
+    visibility: hidden;
+}
+
+.vt-article #vt_body_col p a {
+    text-decoration: underline;
+}
+
+.nav a:hover{
+    color: #333;
+}
+
+.download{
+    font-size: 15px;
+}
+
+/*puts a carat before list items when there is no image in list component*/
+.vt-list-columns ul.image-format-hide > li > ul > li > ul > li:before,
+
+/*puts a carat before lists when they are made with a text component*/
+.vt-text ul li:before,
+
+/*
+puts a carat before lists when they are made with a text component inside 
+a tab component
+*/
+.vtmultitab .vt-text ul li:before,
+
+/*
+puts a carat before lists when they are made with an HTML component
+*/
+.vt-rawhtml ul li:before,
+
+/*
+puts a carat before lists when they are made with a feedreader component
+*/
+ul.vt_feed_items li:before
+
+{
+    content: '\f105'; 
+    font-family: FontAwesome;
+    display: inline-block;
+    width: 1.2em;
+    margin-left: -19px;
+    float: left;
+}
+
+/*class for removing bullets in any component*/
+.vt-c-list-no-carats .vt-list-columns ul.image-format-hide > li > ul > li > ul > li:before,
+.vt-c-list-no-carats.vt-text ul li:before,
+.vt-c-list-no-carats .vtmultitab .vt-text ul li:before,
+.vtmultitab .vt-c-list-no-carats .vt-text ul li:before,
+.vt-rawhtml.vt-c-list-no-carats ul li:before,
+.vt-c-list-no-carats ul.vt_feed_items li:before,
+.vt-c-list-no-carets .vt-list-columns ul.image-format-hide > li > ul > li > ul > li:before,
+.vt-c-list-no-carets.vt-text ul li:before,
+.vt-c-list-no-carets .vtmultitab .vt-text ul li:before,
+.vtmultitab .vt-c-list-no-carets .vt-text ul li:before,
+.vt-rawhtml.vt-c-list-no-carets ul li:before,
+.vt-c-list-no-carets ul.vt_feed_items li:before
+{
+    content: none;
+}
+.vt-c-list-no-carats ul{
+    padding-left: 0px;
+}
+
+.vt-image-caption{
+    padding-top: 5px;
+}
+
+.vt_img_right .vt-image-caption{
+    margin-left: 40px;
+}
+
+
+
+.vt-home .featured-content-container .vt-image-desc {
+    font-family: "Lato",sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    margin-top: 0px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-shadow: 2px 2px #333;
+    color: #FFF;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 26px;
+    margin-bottom: 10px;
+    float: left;
+    top: 0px;
+}
+
+.vt-home .featured-content-container .vt-image-caption:hover {
+    /*text-decoration: underline;*/
+}
+
+.vt-home .featured-content-container .vt-image-caption {
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0px;
+    text-shadow: 2px 2px #333;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    margin-bottom: 0px;
+    width: 100%;
+    padding-left: 28px;   
+    padding-right: 28px;   
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+
+.vt-home .featured-content-container .vt-image-desc:hover{
+    /*text-decoration: underline;*/
+    
+}
+
+/*body #vt_right_col ul li,
+body .vt-left-col ul li,
+.general-body ul li,
+#vt_body_col ul li,
+#vt_footer_wrapper ul li,
+.vtmulticolumn ul li,
+.vt-bio main ul li,
+ #vt_article_authors ul li,
+ .vt-text ul li*/
+ ul li
+{
+    list-style-type: none;
+}
+
+.page-title h1{
+    margin-bottom: 20px;
+}
+
+
+
+#vt_article_authors li,
+#vt_article_locations li
+{
+    margin-left: -40px;
+    list-style-type: none;
+}
+.vt-home .vtmulticolumn li{
+    /* line-height: 30px; */
+     line-height: 1.8;
+}
+
+.vtTab li{
+    margin-left: 0px;
+    list-style-type: none;
+}
+
+.moss-submenu ul li{
+    list-style: none;
+}
+
+.moss-submenu ul li a:before{
+    content: '\f105'; ;
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.2em;
+    width: 1.2em;
+}
+
+/*accordian component*/
+.vtAccordion h4,
+.vtAccordion p,
+.vtAccordion li,
+.vtAccordion a {
+    font-size: 18px;
+    font-family: "PT Sans",sans-serif;
+    font-weight: 400;
+}
+
+.vtAccordion a:hover, 
+.vtAccordion a:visited, 
+.vtAccordion a:focus
+{
+    color: #660000;
+}
+
+#vt_footer_wrapper li a,
+#vt_footer_wrapper li p,
+#vt_footer_wrapper li,
+#vt_footer_wrapper p,
+#vt_footer_wrapper h1,
+#vt_footer_wrapper h2,
+#vt_footer_wrapper h3,
+#vt_footer_wrapper h4,
+#vt_footer_wrapper a {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#vt_footer_wrapper li:before {
+    display: none;
+}
+
+/*article page*/
+.share-links a{
+    font-size: 30px;
+    color: #333;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+
+.follow-virginia-tech-icons a, .follow-us-icons a{
+    font-size: 30px;
+    color: #333;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+.follow-virginia-tech-icons, .follow-us-icons{
+    margin-top: 10px;
+}
+
+.vt-home .featured-content-container .vt-image{
+    margin-bottom: 0px;
+}
+
+.carousel-caption.left{
+    padding-bottom: 45px;
+}
+
+.vt-carousel h3{
+    
+    text-shadow: 2px 2px 0px #000;
+}
+
+.vt-carousel p, .vt-carousel a{
+
+    text-shadow: 1px 1px 0px #000;
+}
+
+/* used by download component for file description */
+small {
+    font-weight: 400;
+    line-height: 1.8;
+    font-size: 14px;  /* same as figure captions */
+}
+
+/* italic font weights */
+i, cite, em, var, address, dfn {
+    font-family: "PT Sans",sans-serif;
+    font-weight: 400;
+}
+
+#vt_body_col .resourceAuthorList, #vt_body_col .resourceAttachmentList{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#vt_body_col .resourceAuthorList li, #vt_body_col .resourceAttachmentList li{
+    font-size: small;
+}

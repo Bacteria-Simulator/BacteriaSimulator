@@ -1,0 +1,32 @@
+/*small: min 768px*/
+
+
+/**
+* #.# HEADER
+*
+* Header includes logo, top Maroon bar with department name, search box and mobile menu button. 
+  Below Maroon bar is sticky grey bar, which holds navigation and breadcrumbs, depending on scroll 
+  position. 
+*/
+
+.shield-mobile{
+	display: none;
+}
+
+
+/*article page*/
+.share-links a{
+    padding-left: 0px;
+}
+
+.share-links .fa-facebook, .share-links .fa-twitter{
+	padding-left: 8px;
+}
+
+.article-grey-rule {
+    margin-top: -48px;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}

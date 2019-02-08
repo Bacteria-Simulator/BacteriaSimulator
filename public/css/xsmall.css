@@ -1,0 +1,643 @@
+/*xsmall: max 767px*/
+.moss-header{
+    border: none;
+}
+/*hides main logo when menu is open*/
+.openright .logo-block.menu-closed{
+    display: none;
+}
+
+/*displays logo inside menu when open*/
+.logo-block.menu-open {
+    width: 100%;
+    max-width: 274px;
+    left: 0px;
+    position: absolute;
+    top: 19px;
+    height: 88px;
+}
+
+/*hides desktop shield*/
+.shield{
+    display: none;
+}
+
+/*mobile shield*/
+.shield-mobile {
+    position: absolute;
+    top: 10px;
+    width: 27px;
+    height: 54px;
+    display: none;
+    left: 13px;
+}
+
+/*Mobile Menu*/
+.glyphicon-menu-hamburger{
+	font-size: 12.5px;
+}
+
+/*Menu Button before page is scrolled. */
+.moss-menu-button {
+    position: absolute;
+    top: -78px;
+    right: 0px;
+    z-index: 5000;
+    display: block;
+    width: 90px;
+    height: 66px;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    background-color: transparent;
+    color: #FFF;
+    text-align: left;
+    padding-left: 15px;
+    border-left: 1px solid #FE5B00;
+}
+
+.moss-menu-button:focus{
+	outline: none;
+}
+
+
+/*Menu Button when page is scrolled.*/
+.moss-menu-button-sticky {
+    right: 0px;
+    z-index: 5000;
+    height: 49px;
+    border-width: medium medium medium 1px;
+    border-style: none none none solid;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #FE5B00;
+    background-color: #282323;
+    text-align: left;
+    color: #fff;
+    top: 0;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.gateway{
+    margin-top: 20px
+}
+
+.mobile-moss-search-block {
+    height: 87px;
+    display: -webkit-box!important;
+	display: -webkit-flex!important;
+	display: -moz-box!important;
+	display: -ms-flexbox!important;
+	display: flex!important;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.mobile-moss-search-block *{
+	border-radius: 0px;
+}
+
+/*Breadcrumbs*/
+
+.mobile-gateway{
+	padding-top: 15px;
+	height: 50px;
+	margin-left: 27px;
+}
+.mobile-gateway .moss-breadcrumbs a{
+	color: #ffffff;
+	text-transform: none;
+}
+
+.gateway .moss-breadcrumbs {
+	padding-left: 0px;
+    margin: 0px;
+    /*overflow: hidden;*/
+    white-space: nowrap;
+    height: 50px;
+    color: #FFF;
+    position: relative;
+    top: 0px;
+    margin-top: -15px;
+    padding-top: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+
+}
+
+.mobile-gateway:after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    top: 0; right: 15px;
+    background-image: -webkit-linear-gradient(right, rgba(40, 35, 35, 1), rgba(40, 35, 35, 0));
+    background-image: -moz-linear-gradient(right, rgba(40, 35, 35, 1), rgba(40, 35, 35, 0));
+    background-image: -ms-linear-gradient(right, rgba(40, 35, 35, 1), rgba(40, 35, 35, 0));
+    background-image: -o-linear-gradient(right, rgba(40, 35, 35, 1), rgba(40, 35, 35, 0));
+    background-image: linear-gradient(to left, rgba(40, 35, 35, 1), rgba(40, 35, 35, 0));
+}
+
+/*provides extra padding for mobile*/
+.flypanels-content .container{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/*allows space to scroll breadcrumbs into full visibility.*/
+.gateway .moss-breadcrumbs a:last-child{
+    padding-right: 100px;
+	color: #93A7B3
+}
+
+.breadcrumb-slash{
+	color: #FE5B00;
+}
+.mobile-gateway .glyphicon-menu-right{
+	color: #fff;
+	font-size: 12px;
+	padding-right: 9px;
+	padding-left: 7px;
+	padding-bottom: 0px;
+	margin-bottom: 2px;
+	vertical-align: middle;
+}
+
+form#vt_header_search_form{
+	height: 50px;
+}
+
+
+.moss-search-button{
+	width: 50px;
+	height: 50px;
+}
+
+
+/*Navigation*/
+#navbar-collapse-1 {
+    border: none;
+    background-color: #282323;
+    width: 85%;
+    position: absolute;
+    right: 0px;
+    margin-right: 0px;
+    box-shadow: none;
+    float: right;
+    overflow: hidden;
+    top: 50px;
+    min-height: 2000px;
+
+}
+
+.navbar-nav{
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 100%;
+	max-height: 400px;
+}
+
+/*removes background color from links and span in mobile menu*/
+.navbar-default .navbar-nav > .open > a{
+	background-color: transparent!important;
+}
+
+/*gives room for hit area in mobile menu with subordinate links*/
+div.yamm-content li{
+	padding-bottom: 10px;
+	clear: left;
+}
+
+.yamm .yamm-content{
+	padding-top: 0px;
+}
+
+ul.link{
+	margin-top: 15px;
+}
+
+li > a:hover{
+	background-color: transparent;
+}
+
+div.yamm-content li,
+div.yamm-content a{
+	color: #fff;
+}
+
+/*creates a scroll for each link in mobile menu with subordinate links.*/
+.dropdown-menu{
+	color: #5C0000 ;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown a{
+    color: #fff;
+    float: left;
+}
+
+.dropdown a,
+.dropdown li,
+.dropdown a:visited{
+	color: #fff!important;
+
+}
+
+li.dropdown{
+	min-height: 75px;
+	padding-top: 16px;
+	border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.navbar-nav .open .dropdown-menu {
+    margin-top: 40px;
+}
+
+/*justifies mobile nav correctly*/
+.navbar-nav{
+	margin-left: -15px;
+}
+
+.navbar-default .navbar-nav > li:hover > a{
+	background-color: transparent!important;
+    color: #fff;
+}
+
+.dropdown li:last-child{
+	padding-bottom: 0px;
+}
+
+.tab-content a {
+	float: none;
+	padding: 10px;
+}
+
+.shield {
+    left: 15px;
+}
+
+/*menu button*/
+.flypanels-topbar a.flypanels-button-left, .flypanels-topbar a.flypanels-button-right{
+	padding: 23px 20px 10px ;
+}
+
+.flypanels-topbar-sticky{
+	background-color: #282323;
+}
+
+.flypanels-container .flypanels-main .flypanels-content{
+	/*padding-top: 20px;*/
+}
+
+/*overlay when menu is open*/
+.flypanels-container.openleft .flypanels-main .flypanels-content .overlay, .flypanels-container.openright .flypanels-main .flypanels-content .overlay,
+.flypanels-container.openright .flypanels-main .flypanels-content .overlay{
+	display: none;
+}
+
+/*hamburger button and search button*/
+a.flypanels-button-left:hover, a.flypanels-button-left:visited, a.flypanels-button-left:focus, 
+a.flypanels-button-right:hover, a.flypanels-button-right:visited, a.flypanels-button-right:focus  {
+	color:#fff;
+}
+
+/*search button when panel is open*/
+.flypanels-container .offcanvas .panelcontent[data-panel="search"] .searchbox .searchbutton {
+    color: #333;
+}
+
+/*border on top of menu items*/
+.panelcontent nav.flypanels-treemenu li:first-child {
+    border-top: none;
+}
+/*border on top of menu items*/
+.panelcontent nav.flypanels-treemenu {
+    border-top: 2px solid #555555;
+    /*border-top: none;*/
+}
+
+/*border between link and folder items*/
+.panelcontent nav.flypanels-treemenu ul li.haschildren a.link {
+    width: 200px;
+    border-right: none;
+    border-bottom: 2px solid #555555;
+    word-wrap: break-word;
+}
+
+.panelcontent nav.flypanels-treemenu li div a.expand{
+    border-bottom: 2px solid #555555;
+}
+
+/*border on bottom of menu items*/
+.panelcontent nav.flypanels-treemenu ul li div {
+    border-bottom: none;
+}
+
+/*border on last menu item*/
+.panelcontent nav.flypanels-treemenu ul:last-child li div {
+    border-bottom: none;
+}
+
+/*borders between expanded menu items*/
+.panelcontent nav.flypanels-treemenu ul li.haschildren li div {
+    border-bottom-color: #C2C1BA;
+}
+
+/*borders between expanded menu items*/
+.panelcontent nav.flypanels-treemenu ul li.haschildren li.haschildren li div {
+    border-bottom-color: #C2C1BA;
+}
+
+/*BACKGROUND COLORS*/
+/*first level navigation background color*/
+.flypanels-container .offcanvas{
+	background-color: #282323 ;
+}
+
+/*rollover for first level folder*/
+.panelcontent nav.flypanels-treemenu li div a.expand:hover,
+.panelcontent nav.flypanels-treemenu li div a.expand:focus
+{
+    background-color: #282323!important;
+    color: #fff;
+}
+/*rollover for first level link*/
+.panelcontent nav.flypanels-treemenu li div a.link:hover,
+.panelcontent nav.flypanels-treemenu li div a.link:focus
+{
+    color: #fff;
+    background-color: #282323!important;
+    text-decoration: none;
+}
+
+/*second level background color*/
+.panelcontent nav.flypanels-treemenu ul li.haschildren li div a,
+.panelcontent nav.flypanels-treemenu ul li.haschildren li div a:hover,
+.panelcontent nav.flypanels-treemenu ul li.haschildren li div a:focus,
+.vt-ql-list {
+    background-color: #557082;
+    color: #fff;
+}
+
+/*second level hover*/
+.panelcontent nav.flypanels-treemenu ul li.haschildren li div a.link:hover
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*rollover for second level link*/
+.panelcontent nav.flypanels-treemenu ul li.haschildren li div a.link:hover,
+.panelcontent nav.flypanels-treemenu ul li.haschildren li div a.link:focus
+{ 
+    color: #fff;
+    background-color: #557082!important;
+    text-decoration: none;
+}
+
+/*rollover for second level folder*/
+.panelcontent nav.flypanels-treemenu ul li.haschildren li div a.expand:hover,
+.panelcontent nav.flypanels-treemenu ul li.haschildren li div a.expand:focus
+{
+    background-color: #557082!important;
+    color: #fff;
+}
+
+.panelcontent nav.flypanels-treemenu ul li.haschildren.expanded a.expand,
+.panelcontent nav.flypanels-treemenu ul li.haschildren.expanded a.expand:hover,
+.panelcontent nav.flypanels-treemenu ul li.haschildren.expanded a.expand:visited,
+.panelcontent nav.flypanels-treemenu ul li.haschildren.expanded a.expand:focus{
+    background-color: #557082!important;
+}
+
+/*second level link borders*/
+.panelcontent nav.flypanels-treemenu ul li.haschildren li.haschildren a.link {
+    border-right: none;
+    width: 200px;
+}
+
+/*third level*/
+.panelcontent nav.flypanels-treemenu ul li.haschildren li.haschildren li div a, 
+.panelcontent nav.flypanels-treemenu ul li.haschildren li.haschildren li div a:hover, 
+.panelcontent nav.flypanels-treemenu ul li.haschildren li.haschildren li div a:visited, 
+.panelcontent nav.flypanels-treemenu ul li.haschildren li.haschildren li div a:focus {
+    background-color: #EDEADA;
+    color: #333!important;
+}
+
+.panelcontent nav.flypanels-treemenu ul li.haschildren li.haschildren li div a:hover, 
+.panelcontent nav.flypanels-treemenu ul li.haschildren li.haschildren li div a:focus, 
+.panelcontent nav.flypanels-treemenu ul li.haschildren li.haschildren li div a:visited {
+    background-color: #EDEADA!important;
+    color: #333!important;
+}
+
+.panelcontent nav.flypanels-treemenu ul li.haschildren.expanded li.haschildren.expanded a.expand,
+.panelcontent nav.flypanels-treemenu ul li.haschildren.expanded li.haschildren.expanded a.expand:hover,
+.panelcontent nav.flypanels-treemenu ul li.haschildren.expanded li.haschildren.expanded a.expand:visited,
+.panelcontent nav.flypanels-treemenu ul li.haschildren.expanded li.haschildren.expanded a.expand:focus{
+    background-color: #EDEADA!important;
+    color: #333!important;
+}
+
+/*first level folder closed*/
+.vt_nav_level_0 .glyphicon.fold-indicator:before { 
+content: "\e252"; /*down arrow*/
+} 
+
+/*first level folder expanded*/
+.vt_nav_level_0.expanded .glyphicon.fold-indicator:before { 
+content: "\e253"; /*up arrow*/
+} 
+
+/*first level folder expanded, second level closed*/
+.vt_nav_level_0.expanded .vt_nav_level_1 .glyphicon.fold-indicator:before{
+content: "\e252"; /*down arrow*/  
+}
+
+/*first level folder expanded, second level closed*/
+.vt_nav_level_0.expanded .vt_nav_level_1.expanded .glyphicon.fold-indicator:before{
+content: "\e253"; /*up arrow*/  
+}
+
+
+/*arrow size and position*/
+.haschildren .glyphicon{
+	font-size:18px;
+    top: 33%;
+}
+
+.flypanels-container .offcanvas .panelcontent[data-panel="treemenu"] {
+    padding-top: 84px;
+}
+
+.panelcontent nav.flypanels-treemenu ul li a i {
+    font-size: 28px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    top: 10px;
+    margin-top: -3px;
+}
+
+.verticalAlignParent{
+    background-color: blue;
+    display: table;
+    height: 100%;
+}
+.panelcontent nav.flypanels-treemenu ul li.haschildren a.expand{
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+.panelcontent nav.flypanels-treemenu li div .expand{
+    text-align: center;
+    /*display: table;*/
+}
+
+.moss-search-block{
+    padding: 0px;
+    border-radius: none;
+}
+
+.moss-search-box{
+    background-color: transparent;
+    color: #fff!important;
+    word-wrap: break-word;
+    padding: 11px 15px 13px;
+    border-bottom: 2px solid #555555;
+}
+
+.moss-search-button {
+    width: 61px;
+    height: 50px;
+    float: right;
+    top: -50px;
+    position: relative;
+    background-color: transparent;
+}
+
+.haschildren li a{
+    color: rgb(255, 255, 255);
+    padding: 11px 15px 13px;
+    width: 260px;
+    display: inline-block;
+}
+
+.panelcontent nav.flypanels-treemenu ul li a {
+    width: 200px;
+    border-right: medium none;
+    border-bottom: 2px solid #555;
+    word-wrap: break-word;
+    color: #FFF;
+    padding: 11px 15px 13px;
+    display: inline-block;
+    width: 260px;
+}
+
+.panelcontent nav.flypanels-treemenu ul li.haschildren li div a.link{
+    padding-left: 15px;
+}
+
+.panelcontent nav.flypanels-treemenu.touch li a:hover{
+    color: #fff!important;
+    background-color:#282323!important;
+}
+
+#vt_body_col{
+    margin-bottom: 10px;
+}
+
+#vt_right_col{
+    margin-top: 10px;
+}
+
+#vt_footer_wrapper ul,
+.footer-briefs ul{
+    float: none;
+    text-align: center;
+    position: relative;
+    margin-left: -20px;
+    width: 100%;
+}
+
+.footer-briefs li{
+    border-bottom: 1px solid #555;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#vt_footer_wrapper li a{
+    color: #fff;
+}
+
+
+
+*/
+/*article page*/
+.share-links a{
+    padding-left: 0px;
+}
+
+.article-grey-rule {
+    margin-top: -48px;
+}
+
+
+
+/*responsive version of tabs, which becomes accordian*/
+.vtTab h4,
+.vtTab p
+{
+        font-size: 15px;
+    font-family: "PT Sans",sans-serif;
+    font-weight: 300;
+}
+
+/*pagination controls, range of pages */
+.vt-pagination-controls .page-numbers button{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/*
+tag display in mobile, prevents text from overlapping in two decks on each tag.
+also stacks each tag in a vertical list. 
+*/
+.vt-tagcloud ul li a {
+    /* line-height: 29px; */
+     line-height: 1.8;
+    float: left;
+}
+
+
+/*mobile view of carousel caption for homepages*/
+.featured-content-container .carousel-caption.left.vt-control-type-belowImage {
+    padding-left: 23px;
+}
+
+/*mobile view of carousel controls for homepages*/
+.featured-content-container .vt-carousel-control-belowImage {
+    margin-left: 2px;
+}
+
+.featured-content-container .vt-carousel h3 {
+    font-size: 30px;
+}
+
+/*carousel controls in mobile for the search pages*/
+#vt-search .carousel-caption, .carousel-caption.left, .carousel-caption.center, .carousel-caption.right{
+    height: auto;
+    background-color: #333;
+    padding-left: 15px;
+}
+
+#vt_footer_wrapper{
+    text-align: center;
+}

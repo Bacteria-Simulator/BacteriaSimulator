@@ -1,0 +1,14 @@
+/** on top of bootstrap css found in www.assets.cms.vt.edu **/
+/** global_assets **/
+
+@import url(//assets.cms.vt.edu/fonts/fonts.css);
+
+@import url(flyPanels.css);
+@import url(core.css);
+@import url(featured-image.css);
+@import url(text.css);
+@import url(large.css)(min-width:1200px);
+@import url(medium.css)(min-width:992px) and (max-width: 1199px);
+@import url(small.css)(min-width:768px) and (max-width: 991px);
+@import url(xsmall.css)(max-width: 767px);
+@import url(print.css)print;

@@ -1,0 +1,1387 @@
+@charset "UTF-8";
+
+main[tabindex="-1"] { outline: none; }
+div[tabindex="-1"] { outline: none; }
+
+.vt_skip {
+	position: absolute;
+	top: auto;
+	left:-10000px;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+    z-index: 11000;
+}
+
+/*accessibility*/
+.vt_skip_nav a{
+	position:absolute;
+	top:auto;
+	left:-10000px;
+	overflow:hidden;
+	width:1px;
+	height:1px;
+
+}
+
+.vt_skip_nav a:focus,
+.vt_skip_nav a:active {
+	position:absolute;
+	z-index: 999;
+	left:0px;
+	top:0px;
+	padding: 5px;
+	background-color:#FFF;
+	color: #F60;
+	width: auto;
+	height: auto;
+	-webkit-transition: top .1s ease-in, background .5s linear;
+    transition: top .1s ease-in, background .5s linear;
+}
+body{
+	background-color: #333;
+}
+
+/*HEADER*/
+.moss-header{
+	background-color: #660000;
+	height: 87px;
+	border-bottom: 1px solid #fe5b00;
+}
+
+/*home version of moss header*/
+.home{
+	/*border-bottom: none;*/
+}
+
+.department-name {
+    position: relative;
+    height: 87px;
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.department-name a {
+    font-family: 'Lato', sans-serif;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.department-name16 {
+    font-size: 16px !important;
+}
+
+.vertical-divider{
+	height: 66px;
+    border-left: 1px solid #FE5B00;
+    width:1px;
+    position: relative;
+    left: -15px;
+    margin-right: 15px;
+}
+
+.logo-block {
+    width: 100%;
+    max-width: 274px;
+    position: relative;
+    top: 19px;
+    height: 56px;
+}
+
+.moss-search-block {
+	position: relative;
+	height: 87px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	z-index: 10000000s;
+}
+
+.moss-search-box {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 5px;
+}
+
+form#vt_header_search_form{
+	width: 100%;
+	height: 30px;
+	border: none;
+}
+
+.moss-search-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #FE5B00 none repeat scroll 0% 0%;
+    /* line-height: 12px; */
+     line-height: 1.8;
+    vertical-align: top;
+    border: none;
+    margin: 0px;
+    position: relative;
+	top: -30px;
+	float: right;
+}
+
+.shield {
+    position: absolute;
+    top: -40px;
+    left: 2px;
+    width: 27px;
+    height: 54px;
+    display: none;
+    z-index: 10000000;
+}
+
+.navbar {
+    background: #282323;
+    z-index: 100;
+    border-radius: 0px;
+}
+
+/*indicates current page in nav*/
+@media (min-width: 768px){
+a.link-text.current {
+	  background:#fff;
+	  color:#333!important;
+}
+}
+
+/*allows dropdown to be visible on rollover*/
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+/*disables default border around navigation bar. */
+.navbar-default{
+	border: none;
+}
+
+/*background color for rollover in nav*/
+.navbar-default .navbar-nav > li:hover > a,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a.open{
+	background-color: #EDEADA;
+}
+
+/*provides space for shield on scroll.*/
+@media (min-width: 768px){
+.navbar-nav{
+    margin-left: 45px;
+}
+}
+
+/*removes default padding from yamm*/
+.yamm .yamm-content{
+    padding: 0px;
+}
+
+/*padding within nav dropdown*/
+.dropdown .yamm-content li, li.flexMenu-viewMore li{
+	padding: 5px 10px;
+}
+
+/*extra space above first item in dropdown*/
+.dropdown .yamm-content li:first-child{
+	padding-top: 15px;
+}
+
+/*extra space above last item in dropdown*/
+.dropdown .yamm-content li:last-child{
+	padding-bottom: 15px;
+}
+
+/*flex menu*/
+.flexMenu-popup > li > a, .flexMenu-popup > li {
+    display: block;
+}
+
+li.flexMenu-viewMore a:hover,
+li.flexMenu-viewMore a:active,
+.navbar-default .navbar-nav > .active > a
+{
+	background-color: #EDEADA!important;
+}
+
+li.flexMenu-viewMore li a{
+	color: #333!important;
+
+}
+li.flexMenu-viewMore .vt_subnav1_block{
+	display: none;
+}
+
+li.flexMenu-viewMore li{
+	padding-bottom: 5px;
+}
+
+ul.flexMenu-popup{
+	width: 300%;
+	box-shadow: 5px 9px 10px rgba(0, 0, 0, 0.15);
+	background-color: #EDEADA;
+	box-shadow: none;
+	border: none;
+	-webkit-box-shadow: 4px 4px 0px -1px rgba(64,64,57,1);
+	-moz-box-shadow: 4px 4px 0px -1px rgba(64,64,57,1);
+	box-shadow: 4px 4px 0px -1px rgba(64,64,57,1);
+}
+
+.flexMenu-popup {
+    padding: 20px 30px;
+    margin: 0;
+}
+
+.flexMenu-viewMore > a:after {
+    display: inline-block;
+    top: -.1em;
+}
+
+.dropdown-menu{
+	background-color: #EDEADA;
+	box-shadow: none;
+	border: none;
+	-webkit-box-shadow: 4px 4px 0px -1px rgba(64,64,57,1);
+	-moz-box-shadow: 4px 4px 0px -1px rgba(64,64,57,1);
+	box-shadow: 4px 4px 0px -1px rgba(64,64,57,1);
+	margin: 0px;
+	border-radius: 0px;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* style the last main nav item so its dropdown is right justified with the edge of the parent
+to keep long link names from flowing off the page */
+/*
+#vt_main_nav_ul >li:last-child ul {
+    right:0;
+}
+*/
+/*Sticky navbar*/
+.navbar-sticky{
+	position: fixed;
+	top:0;
+	margin-top: 0px;
+	width: 100%;
+	margin-left:0;
+}
+
+/*MAIN CONTENT AREA*/
+.gateway {
+    height: 42px;
+    width: 100%;
+}
+
+.gateway .container{
+	height: 42px;
+}
+
+.gateway .moss-breadcrumbs {
+	padding-left: 0px;
+    margin: 0px;
+    overflow-x: auto;
+    white-space: nowrap;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    margin-top: -15px;
+    padding-top: 15px;
+    padding-right: 100px;
+
+}
+
+/*translucency over breadcrumbs after overflow*/
+.gateway:after {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	width: 150px;
+	height: 50px;
+	top: 0; right: 15px;
+	background-image: -webkit-linear-gradient(right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+	background-image: -moz-linear-gradient(right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+	background-image: -ms-linear-gradient(right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+	background-image: -o-linear-gradient(right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+	background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/*Left navigation*/
+/*arrow placement for left nav*/
+.toggle {
+    display: table-cell;
+    position: relative;
+    right: -15px;
+    text-align: center;
+    vertical-align: middle;
+    width: 60px;
+}
+
+.panel{
+	display: block;
+}
+
+.toggle, .toggle:hover, .toggle:focus{
+	text-decoration: none;
+	color: #333;
+}
+
+.toggle .glyphicon-triangle-top{
+	display: block;
+}
+
+.toggle.collapsed .glyphicon-triangle-top{
+	display: none;
+}
+
+.toggle .glyphicon-triangle-bottom{
+	display: none;
+}
+
+.toggle.collapsed .glyphicon-triangle-bottom{
+	display: block;
+}
+
+.panel-default > .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-bottom: 2px solid #999;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.panel-group .panel,
+.panel-body,
+.panel-group .panel-heading + .panel-collapse > .panel-body,
+.panel
+{
+	border-radius: 0px;
+	border: none;
+	border-bottom: none;
+	box-shadow: none;
+}
+
+/*third level link border*/
+#collapseOne{
+	border-top: 4px solid white;
+	border-bottom: 4px solid white;
+}
+
+/*third level link box*/
+.panel-body, .vtAccordion .panel-body {
+	padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.panel-body:last-child {
+    padding-bottom: 10px;
+}
+
+.vtAccordion .panel-body:last-child {
+    padding-bottom: 0px;
+}
+
+.panel-group .panel .panel-collapse,
+.vtAccordion .panel-body
+{
+    background-color: #fdfbf3;
+}
+
+.panel-heading{
+	padding-left: 0px;
+}
+
+.flypanels-container .flypanels-main{
+	background-color: #fff;
+}
+
+.vtSubnav ul {
+	margin:0;
+	padding:0;
+	border-radius:0;
+	color:#333;
+	list-style:none;
+	font-size:12px;
+	/* line-height: normal; */
+     line-height: 1.8;
+}
+
+/*Tab component*/
+.tab-content{
+	padding: 10px;
+	background-color: #fdfbf3;
+    z-index: 990;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover
+{
+    color: #555;
+    cursor: default;
+    background-color: #fdfbf3;
+    border: none;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs > li > a{
+	border-radius: 0;
+}
+
+/*removes space between tab and content*/
+.nav-tabs > li{
+	margin-bottom: -2px;
+}
+
+/*removes space between tabs */
+.nav-tabs > li > a{
+	margin-right: 0px;
+}
+
+.tab-content > .active {
+    background-color: #fff;
+    padding: 20px;
+	padding-right: 35px;
+}
+
+/*eliminates bounce with sticky nav*/
+@media (min-width: 768px){
+    #vt_footer_wrapper .content-sticky{
+        padding-top: 0px;
+    }
+}
+
+.vt-image-desc{
+	display: none;
+}
+
+
+
+/* FOOTER */
+#vt_footer_wrapper {
+	float:left;
+	width:100%;
+	background:#333;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#vt_footer_bg {
+	float:left;
+	margin-top:20px;
+	min-height:100px;
+	width:100%;
+	background:#333;
+}
+
+#vt_footer_wrapper img{
+	max-width: 274px;
+}
+
+/*fixes left panel in position*/
+.flypanels-container.openright .flypanels-right {
+    overflow: auto;
+    position: fixed;
+    right: 0px;
+}
+
+a.flypanels-button-left-sticky{
+	position: relative;
+	top: -15px;
+
+}
+
+/*makes top bar transparent until scrolled*/
+.flypanels-topbar {
+	background-color: transparent;
+}
+
+@media (min-width: 768px){
+.flypanels-topbar {
+	display: none;
+}
+}
+
+.flypanels-container .flypanels-main .flypanels-content{
+	margin-left: 0px;
+	padding: 0px;
+}
+
+#vt_nav_home, #vt_nav_home\ nav-item{
+	display:none;
+}
+
+/*css for sandbox*/
+.footer-briefs a{
+	color: white;
+}
+
+.footer-briefs ul{
+	float: left;
+	position: relative;
+}
+
+div.image img {
+    /*margin-bottom: 10px;*/
+}
+
+/*download icon*/
+div.download span.icon{
+	display: none;
+}
+
+/*download icon*/
+div.download:before{
+	content: '\f019';
+    font-family: FontAwesome;
+    display: inline-block;
+    width: 1.2em;
+    float: left;
+}
+
+iframe{
+	border: none;
+	overflow: auto;
+}
+
+/*provides space between components*/
+.parbase{
+	margin-bottom: 40px;
+}
+
+.vt-multicolumn .vt-col >div:last-of-type {
+    margin-bottom: 0;
+}
+
+.flexMenu-popup a.link-text.current{
+	background-color: transparent;
+}
+
+/*tags and search input box*/
+#revTag_filter label input{
+	color: #333 ;
+}
+
+a.header-home-link,
+a.header-home-link:hover,
+a.header-home-link:focus,
+a.header-home-link:visited
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+.vt-bio #vt_right_col{
+	margin-top: 40px;
+}
+
+/*floated images*/
+.vt_img_right img{
+	margin-left: 40px;
+	margin-top: 10px;
+}
+
+.vt_img_left{
+    margin-right: 40px;
+    margin-top: 10px;
+}
+
+/*images*/
+.vt-image{
+	margin-bottom: 20px;
+}
+
+/*
+Ensures that images don't extend beyond the column.
+Also sets initial display to none, which will be changed
+to inline-block after jquery measures image aspect ratio.
+*/
+figure img{
+	max-width: 100%;
+	width: 100%;
+	display: none;
+}
+
+.vt-image-inline {
+    display: inline-block;
+}
+
+/*solution for vertical images that appear too tall if they fill the column*/
+.adaptiveimage img.vt-portrait,
+.vt-article .vt-image img.vt-portrait
+{
+	height: auto;
+	max-height: 500px;
+	width: auto;
+}
+
+/*letter box for vertical images in list output and to prevent runaway height settings on unpublished images, where image is to the left in a list
+.vt-list-columns img.vt-portrait,
+.vt-list-columns img.vt-square,
+.vt-list-columns img.vt-landscape {
+	height: auto;
+	max-height: 157px;
+	width: auto;
+}
+*/
+.adaptiveimage figure,
+.vt-article .vt-image figure,
+.vt-list-columns figure
+{
+	text-align: center;
+    background-color: #333;
+}
+
+.vt-image-caption {
+    background-color: #fff;
+    text-align: left;
+}
+
+.adaptiveimage .vt_thumb_img figure,
+.adaptiveimage .vt_small_img figure,
+.adaptiveimage .vt_medium_img figure
+{
+	background-color: transparent;
+}
+
+/*article page*/
+.article-grey-rule{
+	border-bottom: 2px solid rgb(153, 153, 153);
+    margin-top: -25px;
+}
+
+.date-and-time{
+    margin-bottom: 10px;
+}
+.date-and-time p{
+    border-bottom: 2px solid #999;
+}
+
+.follow-virginia-tech-heading, .follow-us-heading{
+	border-bottom: 2px solid rgb(153, 153, 153);
+}
+
+.follow-virginia-tech-icons{
+	margin-bottom: 30px;
+}
+
+/*pushes right column over when no content is present*/
+#vt_body_col{
+	min-height: 400px;
+}
+
+/*hides side nav if there are no children. this class is added with javascript.*/
+.hidden-side-nav{
+	display: none;
+}
+
+/*moves the social media follow icons up*/
+.follow-virginia-tech-heading h3{
+	margin-top: 0px;
+}
+
+/*search page go button*/
+.vt-search .search-results #vt_search_block{
+	padding: 10px;
+	background-color: #EDEADA;
+}
+
+.vt-search .search-results #vt_search_box{
+	border: none;
+	padding: 4px;
+}
+
+.vt-search .search-results #vt_go_button{
+    border-radius: 0px;
+    border: 0px none;
+    height: 27px;
+    width: 27px;
+    margin-left: -4px;
+}
+
+/*list component data table*/
+
+/*UI element for tags*/
+/*.fg-toolbar{
+	padding: 10px;
+}
+
+.dataTables_filter input{
+	margin-left: 10px;
+}
+
+option, select{
+	font-family: "PT Sans",sans-serif;
+	font-weight: normal;
+	color: #333;
+}
+
+.dataTable{
+	width: 100%;
+}
+
+.dataTable td{
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left: 10px;
+}
+
+.DataTables_sort_wrapper{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+#revTag_paginate a{
+	padding: 10px;
+	margin-right: 0px;
+}
+
+.dataTables_info{
+	margin-bottom: 10px;
+}
+
+.fg-toolbar span.fg-button {
+	color:#333;
+	opacity: 1;
+	margin-left: 3px;
+	margin-right: 3px;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+.fg-toolbar span.first,
+.fg-toolbar span.next{
+	margin-right: 0px;
+	padding: 5px;
+
+}
+
+.dataTables_length{
+	margin-bottom: 10px;
+}
+*/
+
+/*New styles for jquery sortable table*/
+
+/*headers*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default
+{
+    border: 1px solid #d3d3d3;
+    background: transparent;
+    font-weight: 400;
+    color: #333;
+}
+
+.vt-datatable-formatted .table > tbody > tr > td,
+.vt-datatable-formatted .table > tbody > tr > th,
+.vt-datatable-formatted .table > tfoot > tr > td,
+.vt-datatable-formatted .table > tfoot > tr > th,
+.vt-datatable-formatted .table > thead > tr > td,
+.vt-datatable-formatted .table > thead > tr > th,
+
+.vt-tablesorter-formatted .table > tbody > tr > td,
+.vt-tablesorter-formatted .table > tbody > tr > th,
+.vt-tablesorter-formatted .table > tfoot > tr > td,
+.vt-tablesorter-formatted .table > tfoot > tr > th,
+.vt-tablesorter-formatted .table > thead > tr > td,
+.vt-tablesorter-formatted .table > thead > tr > th,
+
+.vt-datatable .table > tbody > tr > td,
+.vt-datatable .table > tbody > tr > th,
+.vt-datatable .table > tfoot > tr > td,
+.vt-datatable .table > tfoot > tr > th,
+.vt-datatable .table > thead > tr > td,
+.vt-datatable .table > thead > tr > th,
+
+.vt-tablesorter .table > tbody > tr > td,
+.vt-tablesorter .table > tbody > tr > th,
+.vt-tablesorter .table > tfoot > tr > td,
+.vt-tablesorter .table > tfoot > tr > th,
+.vt-tablesorter .table > thead > tr > td,
+.vt-tablesorter .table > thead > tr > th
+{
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-weight: 400;
+    vertical-align: middle;
+    padding: 15px;
+}
+
+.vt-datatable-formatted .table th,
+.vt-tablesorter-formatted .table th,
+
+.vt-datatable .table th,
+.vt-tablesorter .table th {
+    background-color: rgba(0,0,0,.05);
+    /* white-space: nowrap; */
+}
+
+/*hover over the header cells, to show that they
+have functionality*/
+.vt-datatable-formatted .table th:hover,
+.vt-tablesorter-formatted .table th:hover,
+
+.vt-datatable .table th:hover,
+.vt-tablesorter .table th:hover {
+    background-color: rgba(0,0,0,.02);
+    cursor: pointer;
+}
+
+.vt-datatable-formatted .table th .ui-icon,
+.vt-datatable .table th .ui-icon {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.vt-datatable-formatted .table th .DataTables_sort_wrapper,
+.vt-tablesorter-formatted .table th,
+.vt-datatable-formatted .table th .DataTables_sort_wrapper p,
+.vt-tablesorter-formatted .table th p,
+
+.vt-datatable .table th .DataTables_sort_wrapper,
+.vt-tablesorter .table th,
+.vt-datatable .table th .DataTables_sort_wrapper p,
+.vt-tablesorter .table th p {
+    font-weight: 700;
+    text-align: center;
+}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-left,
+.ui-corner-tr,
+.ui-corner-tl
+
+{
+    border-radius: 0px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+}
+
+.dataTables_length{
+	padding-right: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+.dataTables_length select{
+    background-color: #fff;
+	border: 1px solid #999999;
+	border-radius: 0px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.dataTables_filter{
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+/*bottom toolbar with pagination*/
+.fg-toolbar.ui-toolbar{
+	background: transparent;
+	border: none;
+}
+
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled
+{
+	opacity: 1;
+
+}
+.dataTables_paginate span.fg-button{
+    background-color: #333;
+    border: none;
+    padding: 5px 10px;
+    box-shadow: none;
+    border-radius: 0px;
+    color: #fff;
+    margin-left: 5x;
+    margin-right: 5px;
+    margin-top: 10px;
+
+}
+
+.dataTables_wrapper{
+	border: none;
+}
+
+.vt-datatable-formatted .table tr:nth-child(even),
+.vt-tablesorter-formatted .table tr:nth-child(even),
+
+.vt-datatable .table tr:nth-child(even),
+.vt-tablesorter .table tr:nth-child(even) {
+    background-color: rgba(0,0,0,.02);
+}
+
+.vt-datatable-formatted .table tr:nth-child(odd),
+.vt-tablesorter-formatted .table tr:nth-child(odd),
+
+.vt-datatable .table tr:nth-child(odd),
+.vt-tablesorter .table tr:nth-child(odd) {
+    background-color: #FFF
+}
+
+.vt-tablesorter-formatted .headerSortUp,
+.vt-tablesorter .headerSortUp {
+    text-align: center;
+}
+
+.vt-tablesorter-formatted .headerSortUp:after,
+.vt-tablesorter .headerSortUp:after {
+    content:'\f0dd';
+	font-family: FontAwesome;
+	padding: 5px;
+}
+
+.vt-tablesorter-formatted .headerSortDown,
+.vt-tablesorter .headerSortDown {
+    text-align: center;
+}
+
+.vt-tablesorter-formatted .headerSortDown:after,
+.vt-tablesorter .headerSortDown:after {
+    content:'\f0de';
+	font-family: FontAwesome;
+	padding: 5px;
+}
+
+@media (max-width: 767px){
+    .dataTables_filter input{
+	   margin-top: 20px;
+    }
+
+}
+/*LIST COMPONENT STYLES*/
+
+/*Removes default bullets from lists*/
+#vt_body_col .vt-list-columns li{
+	list-style-type: none;
+}
+
+/*ensures images don't overflow outside the bootstrap column*/
+.vt-list img
+{
+	max-width: 100%;
+	width: 100%;
+}
+
+.image-format-positionTop .vt-list-title{
+	display: block;
+	margin-top: 10px;
+}
+
+/*provides space between list items*/
+
+.vt-list-columns li.item
+{
+	margin-bottom: 20px;
+}
+
+/*justtifies all lists to the left*/
+.vt-list ul
+{
+	padding-left: 0px;
+}
+
+/*indents lists with no images to the left*/
+.vt-list ul.image-format-hide{
+	padding-left: 20px;
+}
+
+/*ensures that text does not overflow outside the columns*/
+.vt-list-columns span,
+.vt-list-columns li p,
+.vt-list-columns li a
+
+{
+	word-wrap: break-word;
+}
+
+/*List Pagination*/
+.vt-pagination-controls button{
+	background-color: #333;
+	border: none;
+	padding: 5px 10px;
+	box-shadow: none;
+	border-radius:0px;
+}
+
+.vt-pagination-controls .left-controls button{
+	width: 100%;
+}
+.vt-pagination-controls .right-controls button{
+	width: 100%;
+}
+
+.vt-pagination-controls a,
+.vt-pagination-controls a:hover,
+.vt-pagination-controls a:visited
+{
+	font-size: 15px;
+	color: #fff;
+}
+
+.vt-pagination-controls button.current-page{
+	background-color: #777;
+}
+
+.vt-pagination-controls button.current-page a{
+	/*color: #333;*/
+}
+
+.vt-pagination-controls button{
+	color: #ffffff;
+}
+
+
+.vt-pagination-controls .left-controls{
+	margin-bottom: 20px;
+
+}
+.vt-pagination-controls .left-controls .fa{
+	padding-right: 5px;
+
+}
+.vt-pagination-controls .fa-fast-backward,
+.vt-pagination-controls .fa-fast-forward
+{
+	font-size: 12px;
+	margin-bottom:2px;
+}
+
+.vt-pagination-controls .right-controls .fa{
+	padding-left: 5px;
+
+}
+
+.vt-pagination-controls .page-numbers{
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+
+.vt-pagination-controls .right-controls{
+	margin-bottom: 20px;
+}
+
+
+/*VT ALERTS*/
+
+#vt_alert_wrapper{
+	background-color: #d80000;
+}
+
+#vt_alert_wrapper a{
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.vt-alert{
+	color: #ffffff;
+	text-align: left;
+	margin-left: 90px;
+	padding-right: 20px;
+}
+.vt-alert-message {
+	padding-bottom: 10px;
+}
+
+h3.vt-alert-header{
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.vt-alert-message p,
+.vt-alert-date p{
+	font-size: 18px;
+    font-family: "PT Sans",sans-serif;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+#vt_alert_hide_show {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-left: 73px;
+}
+
+#vt_alert_wrapper.vt-close-alert{
+	height: 100%;
+}
+
+#vt_alert_wrapper.vt-close-alert p{
+	display: none;
+}
+
+#vt_alert_wrapper .fa-warning {
+    color: #ffffff;
+    float: left;
+    margin-left: 22px;
+    font-size: 30px;
+    margin-top: 14px;
+
+}
+
+/*tags as they apprear in article content type*/
+
+/*border and space under tag cloud heading*/
+.vt-tagcloud-heading{
+    border-bottom: 2px solid rgb(153, 153, 153);
+    padding-bottom: 15px;
+
+}
+
+/*justifies to the left*/
+.vt-tagcloud ul{
+	padding-left: 0px;
+}
+
+.vt-tagcloud{
+	padding-bottom: 30px;
+}
+
+.vt-tagcloud ul li{
+	list-style-type: none;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    float: left;
+}
+
+.vt-tagcloud ul li a{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+    color: #fff;
+    background-color: #333;
+}
+.vt-tagcloud ul li a:before{
+	content:'\f02b';
+	font-family: FontAwesome;
+	padding-right: 7px;
+}
+
+.vt-tags{
+	padding-bottom: 50px;
+}
+/*provides space under the tags when inserted as a tagcloud component*/
+.tagcloud{
+	padding-bottom: 50px;
+}
+
+/*
+Hiding the tag cloud in the right column until they can be systematically
+removed
+*/
+#vt_right_col .tagcloud{
+	display: none;
+}
+
+/* right column margin fixes for short body content */
+.right-col-margin-0 {
+    margin-left: 0 !important;
+}
+
+.right-col-margin-8 {
+    margin-left: 8.33333333% !important;
+}
+
+.right-col-margin-18 {
+    margin-left: 18px !important;
+}
+
+.right-col-margin-75 {
+    margin-left: 75% !important;
+}
+
+/*tags as they appear in list component output*/
+.vt-table-tags li a,
+.vt-list-tags li a{
+	font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #660000;
+}
+.vt-table-tags li a:before,
+.vt-list-tags li a:before{
+	content:'\f02b';
+	font-family: FontAwesome;
+	padding-right: 5px;
+}
+
+#vt_body_col .vt-list-tags li,
+#vt_right_col .vt-list-tags li
+{
+    /* line-height: 20px; */
+     line-height: 1.8;
+}
+
+/*table display of list component*/
+.vt-list-table-image{
+	width: 15%;
+}
+
+/*add this class to anything to center it.*/
+.vt-center{
+	text-align: center;
+}
+
+/*table styles, when table is created with the text component*/
+
+.vt-text .table>tbody>tr>td,
+.vt-text .table>tbody>tr>th,
+.vt-text .table>tfoot>tr>td,
+.vt-text .table>tfoot>tr>th,
+.vt-text .table>thead>tr>td,
+.vt-text .table>thead>tr>th
+{
+    border: 1px solid #ddd;
+    font-size: 18px;
+    font-weight: 400;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+.vt-text .table th{
+	background-color: rgba(0,0,0,.05);
+}
+
+/*RSS icon and placement for list feed*/
+.vt-list .vt-list-feed{
+	margin-bottom: 10px;
+	/*float: right;*/
+	font-size: 16px;
+	display: table;
+	color: #999999;
+}
+
+.vt-list .vt-list-feed:before{
+	content: '\f09e';
+    font-family: FontAwesome;
+    display: inline-block;
+    width: 1.2em;
+    margin-left: 1px;
+    margin-top: 1px;
+    float: left;
+}
+
+/*add space between little dots*/
+.vt-carousel-control-belowImage .carousel-indicators li{
+	margin-right: 5px;
+}
+
+/*positions controls so that they don't push down content*/
+.vt-carousel-control-belowImage {
+    position: relative;
+    bottom: 44px;
+    z-index: 1000;
+    margin-bottom: -30px;
+}
+
+.vt-carousel-control-belowImage .carousel-control {
+    bottom: 10px;
+}
+
+
+/*classes entered in components to format date and description, if needed*/
+.vt-list.vt-c-list-format-date .vt-list-date-formatted{
+	padding-right: 20px;
+    padding-bottom: 32px;
+    float: left;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.vt-list.vt-c-list-format-date .vt-list-columns ul.image-format-hide > li > ul > li > ul > li:before{
+	display:none;
+}
+
+.vt-list.vt-c-list-format-date ul.image-format-hide{
+	padding-left: 0px;
+}
+
+.vt-list.vt-c-list-format-description p.vt-list-description{
+	float: left;
+	padding-right: 10px;
+}
+
+/* image transparency class */
+.vt-transparent-bg,
+.vt-transparent-bg figure,
+.vt-article .vt-transparent-bg.vt-image figure {
+    background-color: transparent !important;
+}
+
+/* responsive video iframe */
+.vt-c-media-external-responsive-iframe {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+.vt-c-media-external-responsive-iframe iframe, .vt-c-media-external-responsive-iframe object, .vt-c-media-external-responsive-iframe embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.visHidden {
+    visibility: hidden;
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* SITEMAP CSS */
+.sitemap .linkcontainer {
+    margin-left: 30px;
+}
+
+.sitemap .link::before {
+    content: "- ";
+}
+
+.sitemap >.text >.linkcontainer >.link::after {
+    content: ' (site level)';
+}

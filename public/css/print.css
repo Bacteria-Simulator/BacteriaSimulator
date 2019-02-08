@@ -1,0 +1,314 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*CSS RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    overflow: visible;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+p:empty{
+    display: none;
+}
+/*----------------------------------------------------------*/
+/*----------------------------------------------------------*/
+/*                      PRINT STYLES                        */
+/*----------------------------------------------------------*/
+/*----------------------------------------------------------*/
+
+*,
+*:before,
+*:after {
+    background: transparent !important;
+    color: #000 !important; 
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+a,
+a:visited {
+    text-decoration: underline;
+}
+
+
+/*hidden elements*/
+#vt_access_header,
+#vt_side_nav #vt_children_nav,
+#vt_footer_wrapper,
+#vt_pr_actions_row,
+#vt_gateway,
+div.social-media.vt_transparent,
+div.vt_transparent.cnre-twitter
+{
+	display: none !important;
+}
+
+/*prevents page breaking inside a list item or paragraph*/
+ul, li, p, .content-area-body, h2::before{
+	page-break-inside : avoid;
+}
+
+/*if a list is adjectent to a paragraph, clear the list*/
+ul + p{
+    clear: both;
+}
+
+/*padding for table cells */
+td{
+    padding: 2px;
+}
+
+hr:empty{
+    display: none;
+}
+
+ul + ul{
+    float: left;
+    width: 100%;
+}
+
+/*----------------------------------------------------------*/
+/*                      Main Content                        */
+/*----------------------------------------------------------*/
+
+#vt_pr_related_links{
+    float:none;
+}
+
+/*indents bullets in lists */
+#vt_body_wrapper .columns_2 .col-lg-6 ul li{
+    padding-left: 30px !important;
+}
+
+/*extend the body column to 100%*/
+div#vt_body_col.col-lg-6,
+div#vt_right_col.col-md-3.col-md-offset-1,
+div#vt_body_col.col-lg-9 {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0;
+    left: 0;
+}
+
+/*page title underline*/
+#vt_pageTitle h2 {
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+  padding-bottom: 5px !important;
+  padding-left: 0px !important;
+}
+
+/*logo above heading*/
+body:before{
+    padding-bottom: 50px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    display: block;
+    content: url('/global_assets/images/print/vt_logo_grey_text_maroon_shield.png');
+}
+
+/*article heading*/
+#vt_body_col h2, #vt_body_col h4, #vt_body_col h3{
+    padding-top: 30px !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 10px !important;
+    border-bottom: 1px solid black !important;
+    padding-left: 0px !important;
+}
+
+div.content-area-body h2{
+    border-bottom: 1px !important;
+    border-style: solid !important;
+    border-color: black !important;
+}
+
+/*moves list items to left justify*/
+#vt_body_col ul, #vt_body_col ul li {
+  float: left;
+  width: 250px;
+  margin-right: 10px;
+}
+
+/*bullet points*/ 
+#vt_body_col ul li:before{
+    content: "\f111";
+    margin-left: -30px;
+    padding-right: 22px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-size: .5em;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+li.vt_art_imglist_thumb:before{
+    content:'' !important;
+}
+
+
+#vt_body_col h2 + img{
+    clear: none;
+}
+
+/*----------------------------------------------------------*/
+/*				           Images   				        */
+/*----------------------------------------------------------*/
+
+
+.vt_medium_img, 
+.vt_large_img, 
+.vt_img_left,  
+.vt_img_caption_left.vt_medium_img, 
+.vt_img_caption_right
+{
+/*    width: 300px !important;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 0px;
+    margin-left: 0px;*/
+}
+
+.vt_img_center.vt_medium_img {
+    clear: none !important;
+}
+
+ul + .vt_medium_img{
+    float: right;
+    margin-right: 0px;
+}
+
+.vt_img_left, .vt_img_center, .vt_img_right {
+   margin-bottom: 0px !important; 
+}
+
+li.vt_art_imglist_thumb{
+    clear: both;
+    margin-left: 30px !important;
+}
+
+
+.moss-header{
+    display: none;
+}
+
+h1{
+    font-size: 30px;
+    font-family: 'lato', sans-serif;
+    font-weight: 600;
+    line-height: normal;
+}
+
+h2{
+    font-size: 24px;
+    font-family: 'lato', sans-serif;
+    font-weight: 600;
+    line-height: normal;
+}
+
+h3{
+    font-size: 20px;
+    font-family: 'lato', sans-serif;
+    font-weight: 600;
+    line-height: normal;
+}
+
+p, a{
+    font-family: 'lato', sans-serif;
+    line-height: 1.5;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+
+}
+
+.vt-article .vt-image,
+.vt-article .vt-image.caption {
+    float: left;
+    padding-right: 20px;
+}
+
+.vt-article #vt_right_col{
+    display: none;
+}
+
+.vt-article .vt-tagcloud{
+    display: none;
+}
+
+.vt-article .date-and-time{
+    margin-bottom: 30px;
+}
+
+#vt_article_authors li{
+    margin-left: 0px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.flypanels-topbar{
+    display: none;
+}
+
+/*rewrites rule for specific areas*/
+/*.vt-article a[href]:after, */
+a[href]:after {
+    content: normal; /* remove bootstrap styling that displays full link URL */
+    word-break: break-all;
+}
+
+img{
+	max-width: 350px !important;
+    float: left;
+    padding-right: 20px;
+}
+
+.vt-image-caption {
+    padding-top: 5px;
+    clear: both;
+    max-width: 350px;
+}

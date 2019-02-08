@@ -1,0 +1,180 @@
+/*feature-image*/
+
+
+
+
+
+/****************************/
+/* width media queries*/
+/****************************/
+
+@media (max-width: 768px) {
+	
+	/* small window, verticl full image aspect ratio */
+
+
+  	.featured-content-container .carousel-inner .item,
+  	.featured-content-container .carousel-inner .item .item-image,
+  	.featured-content-container .carousel-inner .item .item-image img
+  	{
+		max-width:none;
+		min-width:none;
+
+		width:100%;
+		height:auto;
+		overflow:none;
+	}
+
+	.featured-content-container .carousel-inner .item .item-image{
+		max-height: 100%;
+	}
+
+
+
+
+	
+}
+
+
+@media (min-width: 769px) and (max-width: 1279px) {
+
+	.featured-content-container .carousel-inner .item .item-image{
+		max-height: 60vh;
+	}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+@media (min-width: 769) and (max-width: 1279px) {
+	
+	/* small window, verticl full image aspect ratio */
+
+
+  	.featured-content-container .carousel-inner .item,
+  	.featured-content-container .carousel-inner .item .item-image,
+  	.featured-content-container .carousel-inner .item .item-image img
+  	{
+		max-width:none;
+		min-width:none;
+
+		width:100%;
+		height:auto;
+		overflow:none;
+	}
+
+	.featured-content-container .carousel-inner .item .item-image{
+		max-height: 80vh;
+	}
+
+
+
+
+
+}
+
+
+
+
+@media (min-width: 1280px) {
+
+	/*large window, vertical center*/
+
+
+	/*.featured-content-container .carousel-inner .item:after{
+    	border:1px solid chartreuse;
+		content: 'wide';
+    	display:block;
+		position:absolute;
+		bottom:0;
+		left:0;
+		background:red;
+		color:white;
+		z-index: 90000;
+  	}*/
+
+  .featured-content-container .carousel-inner{
+  	width:100%;
+  	/*max-height:80vh;*/
+  	/*max-height:100%;*/
+  	/*border:1px solid gold;*/
+
+  }
+
+  .featured-content-container .carousel-inner .item{
+  }
+
+  .featured-content-container .carousel-inner .item .item-image img
+  	{
+		max-width:none;
+		min-width:none;
+
+		width:100%;
+		height:auto;
+
+	}
+
+	.featured-content-container .carousel-inner .item .item-image{
+		max-height: 70vh;
+	}
+
+
+
+
+
+
+
+
+}
+
+
+@media (min-width: 2250px) {
+
+
+
+	.featured-content-container .carousel-inner
+	{
+	  	width:100%;
+		position:relative;
+	}
+
+
+  	.featured-content-container .vt-carousel-control-belowImage .container{
+  		margin-left:auto;
+  		margin-right:auto;
+  	}
+
+
+  	.featured-content-container .carousel-inner .item .item-image img
+  	{
+		max-width:100%;
+		min-width:none;
+
+		width:100%;
+		height:auto;
+
+	}
+
+	.featured-content-container .carousel-inner .item .item-image{
+		max-height: 70vh;
+	}
+
+	
+	
+
+
+
+}
+
+
+	  
+
+

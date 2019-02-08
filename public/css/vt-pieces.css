@@ -1,0 +1,109 @@
+@CHARSET "UTF-8";
+
+/*padding within nav dropdown*/
+.dropdown .yamm-content li, li.flexMenu-viewMore li{
+	padding: 5px 10px;
+}
+
+/*extra space above first item in dropdown*/
+.dropdown .yamm-content li:first-child{
+	padding-top: 15px;
+}
+
+/*extra space above last item in dropdown*/
+.dropdown .yamm-content li:last-child{
+	padding-bottom: 15px;
+}
+
+.dropdown-menu{
+	background-color: #EDEADA;
+	box-shadow: none;
+	border: none;
+	-webkit-box-shadow: 4px 4px 0px -1px rgba(64,64,57,1);
+	-moz-box-shadow: 4px 4px 0px -1px rgba(64,64,57,1);
+	box-shadow: 4px 4px 0px -1px rgba(64,64,57,1);
+	margin: 0px;
+	border-radius: 0px;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/*disables default border around navigation bar. */
+.navbar-default{
+	border: none;
+}
+
+/*Tab component*/
+.tab-content{
+	padding: 10px;
+	background-color: #fdfbf3;
+    z-index: 990;
+}
+
+/*background color for rollover in nav*/
+.navbar-default .navbar-nav > li:hover > a,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a.open{
+	background-color: #EDEADA;
+}
+
+/*provides space for shield on scroll.*/
+@media (min-width: 768px){
+.navbar-nav{
+    margin-left: 45px;
+}
+}
+
+/*Sticky navbar*/
+.navbar-sticky{
+	position: fixed;
+	top:0;
+	margin-top: 0px;
+	width: 100%;
+	margin-left:0;
+}
+
+/*Tab component*/
+.tab-content{
+	padding: 10px;
+	background-color: #fdfbf3;
+    z-index: 990;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover
+{
+    color: #555;
+    cursor: default;
+    background-color: #fdfbf3;
+    border: none;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs > li > a{
+	border-radius: 0;
+}
+
+/*removes space between tab and content*/
+.nav-tabs > li{
+	margin-bottom: -2px;
+}
+
+/*removes space between tabs */
+.nav-tabs > li > a{
+	margin-right: 0px;
+}
+
+.tab-content > .active {
+    background-color: #fff;
+    padding: 20px;
+	padding-right: 35px;
+}

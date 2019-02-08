@@ -1,0 +1,76 @@
+@extends('layouts.master-layout')
+@section('title')
+<title>Register</title>
+@endsection
+@section('content')
+<div class="container" style="margin-top: 50px;">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Register</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                        {{ csrf_field() }} <!-- needed to post information -->
+                        <!-- email -->
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                @if ($errors->has('email'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+                        <!-- password -->
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-md-4 control-label">Password</label>
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control" name="password" required>
+                                @if ($errors->has('password'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+                        <!-- password confirm -->
+                        <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+                        <!-- select the type of user -->
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="user_type" class="col-md-4 control-label">What Type of User Are You?</label>
+                            <div class="col-md-6">
+                                <select id="user_type" class="form-control" name="user_type" value="{{ old('user_type') }}" required>
+                                    <option value="" disabled="disabled" selected="selected">Select a Category</option>
+                                    <option value="1">Educator</option>
+                                    <option value="2">Student</option>
+                                    <option value="3">General Public</option>
+                                </select>
+                                @if ($errors->has('user_type'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('user_type') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+                        <!-- submit the form -->
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
