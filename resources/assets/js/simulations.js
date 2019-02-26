@@ -39,7 +39,7 @@ $(document).ready(function() {
     $("#save-simulation").click(function(){
         var userID = '<?php echo $user ;?>';
         if(userID != "-1"){
-            if(($("#select-pathogen :selected").val() != "") && ($("#select-food :selected").val() != '') && ($("#select-temp :selected").val() != '') && ($("#time").val() >= 1) && ($("#cells").val() >= 1) && ($("#title").val() != '')){
+            if(($("#select-pathogen :selected").val() != "") && ($("#select-food :selected").val() != '') && ($("#select-temp :selected").val() != '') && ($("#time").val() >= 1) && ($("#cells").val() >= 1) && ($("#time").val() <= 1000) && ($("#cells").val() <= 1000) && ($("#title").val() != '')){
                 var pathogen_name = $("#select-pathogen :selected").val();
                 var food_name = $("#select-food :selected").val();
                 var temp = $("#select-temp :selected").text();
@@ -72,7 +72,7 @@ $(document).ready(function() {
         */
         $("#run-simulation").click(function(){
             //checks if all the fields are not null and greater than 0
-            if(($("#select-pathogen :selected").val() != "") && ($("#select-food :selected").val() != '') && ($("#select-temp :selected").val() != '') && ($("#time").val() >= 1) && ($("#cells").val() >= 1)){
+            if(($("#select-pathogen :selected").val() != "") && ($("#select-food :selected").val() != '') && ($("#select-temp :selected").val() != '') && ($("#time").val() >= 1) && ($("#cells").val() >= 1) && ($("#time").val() <= 1000) && ($("#cells").val() <= 1000)){
                 var checkBox = document.getElementById("time-chk-box");
                 var userID = '<?php echo $user ;?>';
                 /*
