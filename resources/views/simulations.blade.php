@@ -96,7 +96,7 @@
         //when the run simulation button is clicked we take the input from the user and print it out
         $("#run-simulation").click(function(){
             //checks if all the fields are not null and greater than 0
-            if(($("#select-pathogen :selected").val() != "") && ($("#select-food :selected").val() != '') && ($("#select-temp :selected").val() != '') && ($("#time").val() >= 1) && ($("#cells").val() >= 1) ($("#time").val() <= 1000) && ($("#cells").val() <= 1000)){
+            if(($("#select-pathogen :selected").val() != "") && ($("#select-food :selected").val() != '') && ($("#select-temp :selected").val() != '') && ($("#time").val() >= 1) && ($("#cells").val() >= 1) && ($("#time").val() <= 1000) && ($("#cells").val() <= 1000)){
                 var checkBox = document.getElementById("time-chk-box");
                 var userID = '<?php echo $user ;?>';
                 /*
