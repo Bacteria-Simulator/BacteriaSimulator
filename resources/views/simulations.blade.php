@@ -387,6 +387,7 @@
                     <label>Length of Time (Minutes):</label>
                 </div>
                 <div class="col-md-1">
+                <!-- represents the length of time in minutes with the min being 1 and max at 1000 -->
                     <input type="number" name="time" id="time" value="1" min="1" max="1000" style="width: 50px;">
                 </div>
             </div>
