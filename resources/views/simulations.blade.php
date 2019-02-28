@@ -62,7 +62,7 @@
         $("#save-simulation").click(function(){
             var userID = '<?php echo $user ;?>';
             if(userID != "-1"){
-                if(($("#select-pathogen :selected").val() != "") && ($("#select-food :selected").val() != '') && ($("#select-temp :selected").val() != '') && ($("#time").val() >= 1) && ($("#cells").val() >= 1) && ($("#time").val() <= 1000) && ($("#cells").val() <= 1000) && ($("#title").val() != '')){
+                if(($("#select-pathogen :selected").val() != "") && ($("#select-food :selected").val() != '') && ($("#select-temp :selected").val() != '') && ($("#time").val() >= 1) && ($("#cells").val() >= 1) && ($("#time").val() <= 1000) && ($("#cells").val() <= 1001) && ($("#title").val() != '')){
                     var pathogen_name = $("#select-pathogen :selected").val();
                     var food_name = $("#select-food :selected").val();
                     var temp = $("#select-temp :selected").text();
@@ -96,7 +96,7 @@
         //when the run simulation button is clicked we take the input from the user and print it out
         $("#run-simulation").click(function(){
             //checks if all the fields are not null and greater than 0
-            if(($("#select-pathogen :selected").val() != "") && ($("#select-food :selected").val() != '') && ($("#select-temp :selected").val() != '') && ($("#time").val() >= 1) && ($("#cells").val() >= 1) && ($("#time").val() <= 1000) && ($("#cells").val() <= 1000)){
+            if(($("#select-pathogen :selected").val() != "") && ($("#select-food :selected").val() != '') && ($("#select-temp :selected").val() != '') && ($("#time").val() >= 1) && ($("#cells").val() >= 1) && ($("#time").val() <= 1000) && ($("#cells").val() <= 1001)){
                 var checkBox = document.getElementById("time-chk-box");
                 var userID = '<?php echo $user ;?>';
                 /*
@@ -418,7 +418,7 @@
                     <label>Starting Cells:</label>
                 </div>
                 <div class="col-md-1" style="margin-right: 15px">
-                    <input type="number" name="cells" id="cells" value="1" min="1" max="1000" step="100" style="width: 50px;">
+                    <input type="number" name="cells" id="cells" value="1" min="1" max="1001" step="100" style="width: 50px;">
                 </div>
             </div>
         </form>
