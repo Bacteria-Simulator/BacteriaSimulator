@@ -348,7 +348,7 @@
                 <div class="col-md-4">
                     <!-- Creating the label and input for pathogen drop down-->
                     <div class="col-md-2">
-                        <label for="select-pathogen">Pathogen: </label>
+                        <label for="select-pathogen"> Pathogen: </label>
                     </div>
                     <div class="col-md-8">
                         <select class="form-control" id="select-pathogen" name="select-pathogen">
@@ -378,7 +378,7 @@
                 <div class="col-md-4">
                     <!-- Creating the label and drop down for temperature -->
                     <div class="col-md-6">
-                        <label>Temperature (F): </label>
+                        <label>   Temperature (F): </label>
                     </div>
                     <div class="col-md-1">
                         <select class="form-control" id="select-temp" name="select-temp">
