@@ -411,7 +411,9 @@
                 <div class="col-md-2" style="margin-right: 15px">
                     <input type="checkbox" name="time-chk-box" id="time-chk-box">
                 </div>
+              
             </div>
+            <label size = "1">Full Duration means the simulation will run intel it has reached the time inputted line  </label>
             <!-- Creating the label and input for starting cells -->
             <div class="col-md-4">
                 <div class="col-md-6 col-sm-offset-1" style="margin-right: 15px">
