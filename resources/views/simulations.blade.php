@@ -396,7 +396,7 @@
             <div class="col-md-4">
                 <div class="col-md-7">
                     <label>Length of Time(seconds):
-                           (1 seconds = 1 minutes)</label>
+                           (1 second = 1 minute)</label>
                 </div>
                 <div class="col-md-1">
                 <!-- represents the length of time in minutes with the min being 1 and max at 1000 -->
