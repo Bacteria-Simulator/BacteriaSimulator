@@ -406,7 +406,7 @@
                     <label>Starting Cells:</label>
                 </div>
                 <div class="col-md-1" style="margin-right: 15px">
-                    <input type="number" name="cells" id="cells" value="1" min="1" max="1000" style="width: 50px;">
+                    <input type="number" name="cells" id="cells" value="1" min="1" max="1000" step="100" style="width: 50px;">
                 </div>
             </div>
         </form>
