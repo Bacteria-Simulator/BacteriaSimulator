@@ -272,7 +272,7 @@
                                         var duration = (minutes*speed);
                                     swal({
                                         title: 'Food is unsafe to eat!',
-                                        text: "Number of Cells: " + cells + " Duration: " + duration + " minutes.",
+                                        text: "Number of Cells: " + cells + "       Duration: " + duration + " minutes.",
                                         imageUrl: 'http://www.dadshopper.com/wp-content/uploads/2016/10/21.png',
                                         imageWidth: 210,
                                         imageHeight: 200,
@@ -298,9 +298,8 @@
                                 var duration = (minutes*speed);
                             if (cells < infectious_dosage) {
                             swal({
-                                html: true,
                                 title: 'Food is safe to eat!',
-                                text: "Number of Cells: " + cells + '<br>' + " Duration: " + duration + " minutes.",
+                                text: "Number of Cells: " + cells + "       Duration: " + duration + " minutes.",
                                 imageUrl: 'https://cdn.shopify.com/s/files/1/1061/1924/products/Slightly_Smiling_Face_Emoji_87fdae9b-b2af-4619-a37f-e484c5e2e7a4_large.png?v=1480481059',
                                 imageWidth: 210,
                                 imageHeight: 200,
@@ -310,7 +309,7 @@
                             else {
                                 swal({
                                         title: 'Food is unsafe to eat!',
-                                        text: "Number of Cells: " + cells + " Duration: " + duration + " minutes.",
+                                        text: "Number of Cells: " + cells + "       Duration: " + duration + " minutes.",
                                         imageUrl: 'http://www.dadshopper.com/wp-content/uploads/2016/10/21.png',
                                         imageWidth: 210,
                                         imageHeight: 200,
