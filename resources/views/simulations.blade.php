@@ -271,7 +271,7 @@
                                     else
                                         var duration = (minutes*speed);
                                     swal({
-                                        title: 'You will most likely be sick if you eat this!',
+                                        title: 'Food is unsafe to eat!',
                                         text: "Number of Cells: " + cells + " Duration: " + duration + " minutes.",
                                         imageUrl: 'http://www.dadshopper.com/wp-content/uploads/2016/10/21.png',
                                         imageWidth: 210,
