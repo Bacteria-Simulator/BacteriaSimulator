@@ -300,7 +300,7 @@
                             swal({
                                 html: true,
                                 title: 'Food is safe to eat!',
-                                text: "Number of Cells: " + cells + '<br>' + " Duration: " + duration + " minutes.",
+                                text: "Number of Cells: " + cells + '<br>' " Duration: " + duration + " minutes.",
                                 imageUrl: 'https://cdn.shopify.com/s/files/1/1061/1924/products/Slightly_Smiling_Face_Emoji_87fdae9b-b2af-4619-a37f-e484c5e2e7a4_large.png?v=1480481059',
                                 imageWidth: 210,
                                 imageHeight: 200,
@@ -365,7 +365,7 @@
                 <div class="col-md-4">
                     <!-- Creating the label and input for food drop down-->
                     <div class="col-md-2">
-                        <label>Food: </label>
+                        <label>Food:         </label>
                     </div>
                     <select class="form-control" id="select-food" name="select-food">
                         <option value="" disabled="disabled" selected="selected">
@@ -379,7 +379,7 @@
                 <div class="col-md-4">
                     <!-- Creating the label and drop down for temperature -->
                     <div class="col-md-6">
-                        <label>   Temperature (F): </label>
+                        <label>Temperature (F): </label>
                     </div>
                     <div class="col-md-1">
                         <select class="form-control" id="select-temp" name="select-temp">
@@ -396,7 +396,7 @@
             <!-- Creating the label and input for length of time -->
             <div class="col-md-4">
                 <div class="col-md-7">
-                    <label>Length of Time (seconds):</label>
+                    <label>Length of Time (seconds):     </label>
                     <label size="1">(1 seconds = 1 minutes)</label>
                 </div>
                 <div class="col-md-1">
