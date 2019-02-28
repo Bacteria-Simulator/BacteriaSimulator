@@ -272,8 +272,7 @@
                                         var duration = (minutes*speed);
                                     swal({
                                         title: 'Food is unsafe to eat!',
-                                        text: "Number of Cells: " + cells,
-                                        text: "Number of Durations: " + duration + " minutes.",
+                                        text: "Number of Cells: " + cells + " Duration: " + duration + " minutes.",
                                         imageUrl: 'http://www.dadshopper.com/wp-content/uploads/2016/10/21.png',
                                         imageWidth: 210,
                                         imageHeight: 200,
@@ -297,28 +296,15 @@
                                 var duration = (minutes%10)+(doubling_counter*Number(doubling_time));
                             else
                                 var duration = (minutes*speed);
-                            if (cells < infectious_dosage) {
                             swal({
                                 title: 'Food is safe to eat!',
-                                text: "Number of Cells: " + cells,
-                                text: "Number of Durations: " + duration + " minutes.",
+                                text: "Number of Cells: " + cells + " Duration: " + duration + " minutes.",
                                 imageUrl: 'https://cdn.shopify.com/s/files/1/1061/1924/products/Slightly_Smiling_Face_Emoji_87fdae9b-b2af-4619-a37f-e484c5e2e7a4_large.png?v=1480481059',
                                 imageWidth: 210,
                                 imageHeight: 200,
                                 imageAlt: 'Sick emoji',
                                 animation: false
-                            })}
-                            else {
-                                swal({
-                                        title: 'Food is unsafe to eat!',
-                                        text: "Number of Cells: " + cells,
-                                        text: "Number of Durations: " + duration + " minutes.",
-                                        imageUrl: 'http://www.dadshopper.com/wp-content/uploads/2016/10/21.png',
-                                        imageWidth: 210,
-                                        imageHeight: 200,
-                                        imageAlt: 'Sick emoji',
-                                        animation: false
-                                    })}
+                            })
                             return false;
                         }
                         $("#num_cells").html("Number of Cells: " + cells);
@@ -399,7 +385,7 @@
             <div class="col-md-4">
                 <div class="col-md-7">
                     <label>Length of Time (seconds):</label>
-                    <label size="1">(1 seconds = 1 minutes)</label>
+                    <label>(1 second = 1 minute)</label>
                 </div>
                 <div class="col-md-1">
                 <!-- represents the length of time in minutes with the min being 1 and max at 1000 -->
