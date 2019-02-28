@@ -386,7 +386,7 @@
                 <div class="col-md-7">
                     <label>Length of Time (seconds)</label>
                     <label>
-                        <font size="14">(1 seconds = 1 minute)</font>
+                        <font size="4">(1 seconds = 1 minute)</font>
                     </label>
                 </div>
                 <div class="col-md-1">
