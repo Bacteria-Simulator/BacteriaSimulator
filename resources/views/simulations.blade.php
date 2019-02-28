@@ -296,6 +296,7 @@
                                 var duration = (minutes%10)+(doubling_counter*Number(doubling_time));
                             else
                                 var duration = (minutes*speed);
+                            if (cells < infectious_dosage) {
                             swal({
                                 title: 'Food is safe to eat!',
                                 text: "Number of Cells: " + cells + " Duration: " + duration + " minutes.",
@@ -304,7 +305,17 @@
                                 imageHeight: 200,
                                 imageAlt: 'Sick emoji',
                                 animation: false
-                            })
+                            })}
+                            else {
+                                swal({
+                                        title: 'Food is unsafe to eat!',
+                                        text: "Number of Cells: " + cells + " Duration: " + duration + " minutes.",
+                                        imageUrl: 'http://www.dadshopper.com/wp-content/uploads/2016/10/21.png',
+                                        imageWidth: 210,
+                                        imageHeight: 200,
+                                        imageAlt: 'Sick emoji',
+                                        animation: false
+                                    })}
                             return false;
                         }
                         $("#num_cells").html("Number of Cells: " + cells);
