@@ -165,7 +165,7 @@
                 path_name.innerText = $("#select-pathogen :selected").val() + " on " + $("#select-food :selected").val();
                 //resets the num cells and length of time tags to 0
                 $("#num_cells").html("Number of Cells: " + cells);
-                $("#lot").html("Length of time " + msg + ": " + minutes);
+              //  $("#lot").html("Length of time " + msg + ": " + minutes);
                 //giving the svg more variables
                 var svg = d3.select("svg"),
                 margin = {top: 20, right: 20, bottom: 30, left: 40},
