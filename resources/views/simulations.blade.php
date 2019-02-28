@@ -384,8 +384,10 @@
             <!-- Creating the label and input for length of time -->
             <div class="col-md-4">
                 <div class="col-md-7">
-                    <label>Length of Time in Seconds
-                               (1 sec = 1 min):</label>
+                    <label>Length of Time (seconds)</label>
+                    <label>
+                        <font size="14">(1 seconds = 1 minute)</font>
+                    </label>
                 </div>
                 <div class="col-md-1">
                 <!-- represents the length of time in minutes with the min being 1 and max at 1000 -->
