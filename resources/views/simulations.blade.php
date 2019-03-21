@@ -213,19 +213,26 @@
                 .attr("d", hexbin.hexagon(19.5))
                 .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
                 .attr("fill", function(d) { return color(d.length); });
-                //adding legend to the svg
-                var log = d3.scaleLog()
-                .domain([ 1, infectious_dosage/100 ])
-                .range(["white", "green"]);
-                var svg = d3.select("svg");
-                svg.append("g")
-                .attr("class", "legendLog")
-                .attr("transform", "translate(20,20)");
-                var logLegend = d3.legendColor()
-                .cells([1, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
-                .scale(log);
-                svg.select(".legendLog")
-                .call(logLegend);
+               var quantize = d3.scaleQuantize()
+  .domain([ 0, 0.15 ])
+  .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+
+var svg = d3.select("svg");
+
+svg.append("g")
+  .attr("class", "legendQuant")
+  .attr("transform", "translate(20,20)");
+
+var legend = d3.legendColor()
+  .labelFormat(d3.format(".2f"))
+  .useClass(true)
+  .title("A really really really really 
+    really long title")
+  .titleWidth(100)
+  .scale(quantize);
+
+svg.select(".legendQuant")
+  .call(legend);
                 //the recursive function to add cells until the timer runs out or the infectious dose is reached
                 var makeCallback = function() {
                     // note that we're returning a new callback function each time
