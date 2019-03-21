@@ -222,7 +222,8 @@
                 .range(["white", "green"]);
                 var svg = d3.select("svg");
                 svg.append("g")
-                .attr("class", "legendLog")
+               // .attr("class", "legendLog")
+                                                .attr("class", "legendQuant")
                 .attr("transform", "translate(10,20)");
                 var logLegend = d3.legendColor()
                 .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
