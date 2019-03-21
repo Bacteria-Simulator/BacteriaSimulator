@@ -226,8 +226,7 @@ svg.append("g")
 var legend = d3.legendColor()
   .labelFormat(d3.format(".2f"))
   .useClass(true)
-  .title("A really really really really 
-    really long title")
+  .title("A ")
   .titleWidth(100)
   .scale(quantize);
 
