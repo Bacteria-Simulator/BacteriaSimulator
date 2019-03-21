@@ -223,6 +223,7 @@
                 .attr("transform", "translate(10,10)");
                 var logLegend = d3.legendColor()
                 .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
+                .title("Hello")
                 .scale(log);
                 svg.select(".legendLog")
                 .call(logLegend);
