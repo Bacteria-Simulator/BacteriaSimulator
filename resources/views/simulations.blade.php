@@ -182,7 +182,7 @@
                 .domain([0, infectious_dosage/100]);
                 //creating the hexagons
                 var hexbin = d3.hexbin()
-                .radius(10)
+                .radius(15)
                 .extent([[0, 0], [width, height]]);
                 //recreating the def tag, pattern tag, and image tag to display the background
                 var defs = svg.selectAll("defs")
