@@ -223,7 +223,7 @@
                 .attr("transform", "translate(10,10)");
                 var logLegend = d3.legendColor()
                 .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
-                .title("Hello")
+                .title("Cells per Hexagon:")
                 .scale(log);
                 svg.select(".legendLog")
                 .call(logLegend);
@@ -436,9 +436,6 @@
 </br>
 <center>
     <h3 id="path_name"></h3>
-    <label id="legend_info" style="position: absolute; top: 300px; left: 240px;">Cells</label>
-    <label id="legend_info" style="position: absolute; top: 315px; left: 240px;">per</label>
-    <label id="legend_info" style="position: absolute; top: 330px; left: 240px;">Hexagon:</label>
     <label id="num_cells">Number of Cells: 0</label>
     <label id="lot" class="col-md-offset-1">Length of Time (Minutes): 0</label>
     <label class="col-md-offset-1" for="link">More Info: </label><a id="link" href=""></a>
