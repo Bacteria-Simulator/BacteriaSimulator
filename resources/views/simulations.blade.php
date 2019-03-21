@@ -436,7 +436,7 @@
 <center>
     <h3 id="path_name"></h3>
     <label id="legend_info">Cells per Hexagon:</label>
-    <label id="num_cells">Number of Cells: 0</label>
+    <label id="num_cells" class="col-md-offset-1">Number of Cells: 0</label>
     <label id="lot" class="col-md-offset-1">Length of Time (Minutes): 0</label>
     <label class="col-md-offset-1" for="link">More Info: </label><a id="link" href=""></a>
 </center>
