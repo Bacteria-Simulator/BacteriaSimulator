@@ -214,19 +214,21 @@
                 .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
                 .attr("fill", function(d) { return color(d.length); });
                 //adding legend to the svg
+                                       var quantize = d3.scaleQuantize()
+                                         .domain([ 1, infectious_dosage/100 ])
+                                         .ranged3(d3.range(7).map(function(i) { return "q" + i + "-9"; }));
                  var log = d3.scaleLog()
                 .domain([ 1, infectious_dosage/100 ])
                 .range(["white", "green"]);
                 var svg = d3.select("svg");
                 svg.append("g")
-                .attr("class", "legendLog")
+                .attr("class", "legendLog")                                                
                 .attr("transform", "translate(10,20)");
                 var logLegend = d3.legendColor()
                 .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
-                .title("Cells 
-                per 
-                Hexagon:")
-                .scale(log);
+                .title("Cells per Hexagon:")
+                //.scale(log);
+                                                .scale(quantize);
                 svg.select(".legendLog")
                 .call(logLegend);
                 //the recursive function to add cells until the timer runs out or the infectious dose is reached
