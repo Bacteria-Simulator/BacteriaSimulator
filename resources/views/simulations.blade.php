@@ -214,7 +214,10 @@
                 .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
                 .attr("fill", function(d) { return color(d.length); });
                 //adding legend to the svg
-                var log = d3.scaleLog()
+                        var quantize = d3.scaleQuantize()
+                        .domain([ 0, 0.15 ])
+                        .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+                 var log = d3.scaleLog()
                 .domain([ 1, infectious_dosage/100 ])
                 .range(["white", "green"]);
                 var svg = d3.select("svg");
