@@ -216,14 +216,13 @@
                 //adding legend to the svg
                                        var quantize = d3.scaleQuantize()
                                          .domain([ 1, infectious_dosage/100 ])
-                                         .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+                                         .range(["white", "green"]);
                  var log = d3.scaleLog()
                 .domain([ 1, infectious_dosage/100 ])
                 .range(["white", "green"]);
                 var svg = d3.select("svg");
                 svg.append("g")
-               // .attr("class", "legendLog")
-                                                .attr("class", "legendQuant")
+                .attr("class", "legendLog")                                                
                 .attr("transform", "translate(10,20)");
                 var logLegend = d3.legendColor()
                 .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
