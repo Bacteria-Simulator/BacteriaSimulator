@@ -228,7 +228,6 @@
                 var logLegend = d3.legendColor()
                 .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
                                                 .title("Cells\nper\nHexagon:")
-                                                .titleWidth(6)
                                                 .labelFormat(d3.format(".0f"))
                 //.scale(log);
                                                 .scale(quantize);
@@ -433,12 +432,48 @@
                     <input type="number" name="cells" id="cells" value="1" min="1" max="1001" step="100" style="width: 50px;">
                 </div>
             </div>
-            <input type="checkbox" id="AltSimulation">Weak Immune System<br>
+            
         </form>
         
+        <input type="checkbox" id="AltSimulation">Weak Immune System<br>
+        
+        
+        
+  //remove from here if this does not work
+        
+<script type="text/javascript">
+             
+ $('#select-pathogen').change(function()
+ {
+   // $('#textBoxContainer').empty();
+    var BacteriaSelected= $(this).find('option:selected').attr('value');
+
+    if (BacteriaSelected == "Listeria") 
+    {
+         document.getElementById("checkbox").disabled = false;
+    }
+
+    else 
+    {
+         myFunction();
+    }
+
+    for (var i = 0; i < number; i++)
+    {
+          $('#textBoxContainer').append('<input type="text"/>');
+    }
+   
+});
+
+function myFunction()
+ {
+    document.getElementById("checkbox").disabled = true;
+ }
+</script>
 
         
-       
+        
+        
         
     </div>
     <!-- Creating the run simulations button -->
