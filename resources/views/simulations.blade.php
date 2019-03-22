@@ -227,7 +227,7 @@
                 var logLegend = d3.legendColor()
                 .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
                 .title("Cells per Hexagon:")
-                                                .labelFormat(d3.format(""))
+                                                .labelFormat(d3.format(".0f"))
                 //.scale(log);
                                                 .scale(quantize);
                 svg.select(".legendLog")
