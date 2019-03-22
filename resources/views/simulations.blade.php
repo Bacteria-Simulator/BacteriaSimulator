@@ -22,6 +22,7 @@
         <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <!--<script src="{{ asset('js/simulation.js') }}"></script>-->
         <script>
     //When the page loads, load these jquery functions
@@ -226,8 +227,7 @@
                 .attr("transform", "translate(10,20)");
                 var logLegend = d3.legendColor()
                 .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
-                                                .title("Cells\r\nper\r\nHexagon:")
-                                                .titleWidth(7)
+                                                .title("Cells\nper\nHexagon:")
                                                 .labelFormat(d3.format(".0f"))
                 //.scale(log);
                                                 .scale(quantize);
@@ -428,8 +428,55 @@
                     <input type="number" name="cells" id="cells" value="1" min="1" max="1001" step="100" style="width: 50px;">
                 </div>
             </div>
-            <input type="radio" id="AltSimulation">Weak Immune System<br>
+            <input type="checkbox" id="AltSimulation">Weak Immune System<br>
         </form>
+        
+        
+       
+<script type="text/javascript">
+    //this is the beginning of the script tag which aims to disable the checkbox button when necessary         
+ $('#select-pathogen').change(function()
+ {
+   // $('#textBoxContainer').empty();
+    var BacteriaSelected= $(this).find('option:selected').attr('value');
+
+    if (BacteriaSelected == "Listeria") 
+    {
+         document.getElementById("AltSimulation").disabled = false;
+    }
+
+    else 
+    {
+         myFunction();
+    }
+
+    for (var i = 0; i < number; i++)
+    {
+          $('#textBoxContainer').append('<input type="text"/>');
+    }
+   
+});
+
+function myFunction()
+ {
+    document.getElementById("AltSimulation").disabled = true;
+ }
+ 
+ //end of script section
+</script>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </div>
     <!-- Creating the run simulations button -->
     <div>
