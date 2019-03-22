@@ -347,53 +347,6 @@
 });
 
 
-
-
-
-
-    //this is the beginning of the script tag which aims to disable the checkbox button when necessary         
- $('#select-pathogen').change(function()
- {
-   // $('#textBoxContainer').empty();
-    var BacteriaSelected= $(this).find('option:selected').attr('value');
-
-    if (BacteriaSelected == "Listeria") 
-    {
-         document.getElementById("AltSimulation").disabled = false;
-    }
-
-    else 
-    {
-         myFunction();
-    }
-
-    for (var i = 0; i < number; i++)
-    {
-          $('#textBoxContainer').append('<input type="text"/>');
-    }
-   
-});
-
-function myFunction()
- {
-    document.getElementById("AltSimulation").disabled = true;
- }
- 
- //end of script section
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
 
 
