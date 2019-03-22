@@ -215,7 +215,7 @@
                 .attr("fill", function(d) { return color(d.length); });
                 //adding legend to the svg
                                        var quantize = d3.scaleQuantize()
-                                         .domain([ 1, infectious_dosage/100 ])
+                                         .domain([ 1, infectious_dosage/10 ])
                                          .range(["#ffffff", "#80c080", "#59ac59", "#339933", "#008000", "#005400", "#004100"]);
                  var log = d3.scaleLog()
                 .domain([ 1, infectious_dosage/100 ])
@@ -227,6 +227,7 @@
                 var logLegend = d3.legendColor()
                 .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
                 .title("Cells per Hexagon:")
+                                                .labelFormat(d3.format(""))
                 //.scale(log);
                                                 .scale(quantize);
                 svg.select(".legendLog")
