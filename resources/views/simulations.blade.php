@@ -215,7 +215,7 @@
                 .attr("fill", function(d) { return color(d.length); });
                 //adding legend to the svg
                                        var quantize = d3.scaleQuantize()
-                                         .domain([ 1, infectious_dosage/10 ])
+                                         .domain([ 1, infectious_dosage/100 ])
                                          .range(["#ffffff", "#80c080", "#59ac59", "#339933", "#008000", "#005400", "#004100"]);
                  var log = d3.scaleLog()
                 .domain([ 1, infectious_dosage/100 ])
