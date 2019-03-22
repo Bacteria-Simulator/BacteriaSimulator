@@ -216,7 +216,7 @@
                 //adding legend to the svg
                                        var quantize = d3.scaleQuantize()
                                          .domain([ 1, infectious_dosage/10 ])
-                                         .range(["#f9f9f9", "#a6d1a6", "#53a853", "#008000", "#0c3e0c", "#003500", "#000000"]);
+                                         .range(["#ffffff", "#80c080", "#59ac59", "#339933", "#008000", "#005400", "#004100"]);
                  var log = d3.scaleLog()
                 .domain([ 1, infectious_dosage/100 ])
                 .range(["white", "green"]);
