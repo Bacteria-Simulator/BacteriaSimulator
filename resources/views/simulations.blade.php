@@ -427,6 +427,7 @@
                     <input type="number" name="cells" id="cells" value="1" min="1" max="1001" step="100" style="width: 50px;">
                 </div>
             </div>
+            <input type="radio" id="AltSimulation">Weak Immune System<br>
         </form>
     </div>
     <!-- Creating the run simulations button -->
