@@ -433,46 +433,11 @@
                 </div>
             </div>
             
+            
+             <input type="checkbox" id="AltSimulation">Weak Immune System<br>
         </form>
         
-        <input type="checkbox" id="AltSimulation">Weak Immune System<br>
-        
-        
-        
-  //remove from here if this does not work
-        
-<script type="text/javascript">
-             
- $('#select-pathogen').change(function()
- {
-   // $('#textBoxContainer').empty();
-    var BacteriaSelected= $(this).find('option:selected').attr('value');
-
-    if (BacteriaSelected == "Listeria") 
-    {
-         document.getElementById("checkbox").disabled = false;
-    }
-
-    else 
-    {
-         myFunction();
-    }
-
-    for (var i = 0; i < number; i++)
-    {
-          $('#textBoxContainer').append('<input type="text"/>');
-    }
    
-});
-
-function myFunction()
- {
-    document.getElementById("checkbox").disabled = true;
- }
-</script>
-
-        
-        
         
         
     </div>
