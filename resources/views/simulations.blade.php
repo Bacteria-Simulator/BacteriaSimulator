@@ -215,8 +215,8 @@
                 .attr("fill", function(d) { return color(d.length); });
                 //adding legend to the svg
                                        var quantize = d3.scaleQuantize()
-                                         .domain([ 1, infectious_dosage/100 ])
-                                         .ranged3(d3.range(7).map(function(i) { return "q" + i + "-9"; }));
+                                         .domain([ 1, infectious_dosage/10 ])
+                                         .range(["#ffffff", "#80c080", "#59ac59", "#339933", "#008000", "#005400", "#004100"]);
                  var log = d3.scaleLog()
                 .domain([ 1, infectious_dosage/100 ])
                 .range(["white", "green"]);
@@ -226,7 +226,8 @@
                 .attr("transform", "translate(10,20)");
                 var logLegend = d3.legendColor()
                 .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
-                .title("Cells\nper\nHexagon:")
+                                                .title("Cells\nper\nHexagon:")
+                                                .labelFormat(d3.format(".0f"))
                 //.scale(log);
                                                 .scale(quantize);
                 svg.select(".legendLog")
@@ -426,6 +427,7 @@
                     <input type="number" name="cells" id="cells" value="1" min="1" max="1001" step="100" style="width: 50px;">
                 </div>
             </div>
+            <input type="radio" id="AltSimulation">Weak Immune System<br>
         </form>
     </div>
     <!-- Creating the run simulations button -->
