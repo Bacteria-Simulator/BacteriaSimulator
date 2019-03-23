@@ -55,7 +55,7 @@
 @endsection
 @section('script')
 <!-- all the functions from the simulations page -->
-<svg id="svgtag" width="960" height="500" style="border: 2pt solid maroon">
+<svg id="svgtag" width="960" height="500" style="border: 2pt solid rgb(134, 31, 65)">
 	<defs>
 		<pattern id="imgpattern" width="1" height="1">
 			<image id="imglink" width="960" height="500"
