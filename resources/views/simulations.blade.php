@@ -244,7 +244,7 @@
                         else{
                             minutes++;
                             lot = 1;
-                            $("#lot").html("Length of time " + msg + ": " + minutes);
+                            $("#lot").html("Time Elapsed in Minutes " + msg + ": " + minutes);
                         }
                         //creating a new plot based on the amount of cells
                         points = d3.range(cells).map(function() { return [rx(), ry()]; });
