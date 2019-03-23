@@ -6,10 +6,10 @@
         <!-- creates the container that will hold all of the cells that populate.
         the defs/pattern are here to hold the background image.
         the path tag draws a square and fills it with the pattern. -->
-        <svg id="svgtag" width="960" height="500" style="border: 1pt solid black">
+        <svg id="svgtag" width="960" height="500" style="border: 3pt solid #861F41">
             <defs>
                 <pattern id="imgpattern" width="1" height="1">
-                    <image id="imglink" width="960" height="500"
+                    <image id="imglink" width="960" fill="red" height="500"
                     xlink:href=""/>
                 </pattern>
             </defs>
