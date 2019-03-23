@@ -9,7 +9,7 @@
         <svg id="svgtag" width="960" height="500" style="border: 2pt solid maroon">
             <defs>
                 <pattern id="imgpattern" width="1" height="1">
-                    <image id="imglink" width="960" fill="red" height="500"
+                    <image id="imglink" width="960" height="500"
                     xlink:href=""/>
                 </pattern>
             </defs>
