@@ -242,7 +242,7 @@
                         if(lot % 1 != 0)
                             lot++;
                         else{
-                            minutes++;
+                            minutes+= minutes*100;
                             lot = 1;
                             $("#lot").html("Time Elapsed (Minutes) " + msg + ": " + minutes);
                         }
