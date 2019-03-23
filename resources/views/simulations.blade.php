@@ -153,20 +153,20 @@
                 //doubling time to keep the animations interesting need to be in the double digits
                 if(doubling_time > 100){
                     var doublingTime = Math.round(Number(doubling_time)/100) * Number($("#select-temp :selected").val()); //the growth rate in minutes
-                    var msg = "(~10 minutes per second)";
+                    var msg = " (~10 minutes per second)";
                     var speed = 100;
                 }
-                else{
-                    var doublingTime = Number(doubling_time) * Number($("#select-temp :selected").val());
-                    var msg = "(1 minute per second)";
-                    var speed = 1;
-                }
+                //else{
+                //    var doublingTime = Number(doubling_time) * Number($("#select-temp :selected").val());
+                //    var msg = " (1 minute per second)";
+                //    var speed = 1;
+                //}
                 var minutes = 0; // Total number of random points.
                 //changing the header based on the pathogen selected.
                 path_name.innerText = $("#select-pathogen :selected").val() + " on " + $("#select-food :selected").val();
                 //resets the num cells and length of time tags to 0
                 $("#num_cells").html("Number of Cells: " + cells);
-              //  $("#lot").html("Length of time " + msg + ": " + minutes);
+              //  $("#lot").html("Time Elapsed in Minutes" + msg + ": " + minutes);
                 //giving the svg more variables
                 var svg = d3.select("svg"),
                 margin = {top: 20, right: 20, bottom: 30, left: 40},
