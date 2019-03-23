@@ -153,7 +153,7 @@
                 //doubling time to keep the animations interesting need to be in the double digits
                 if(doubling_time > 100){
                     var doublingTime = Math.round(Number(doubling_time)/100) * Number($("#select-temp :selected").val()); //the growth rate in minutes
-                    var msg = " (~10 minutes per second)";
+                    var msg = "(NOTE: multiplied by ~10)";
                     var speed = 100;
                 }
                 else{
