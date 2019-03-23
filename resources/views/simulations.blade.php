@@ -158,7 +158,7 @@
                 }
                 else{
                     var doublingTime = Number(doubling_time) * Number($("#select-temp :selected").val());
-                    var msg = "(1 minutes per second)";
+                    var msg = "(1 minute(s) per second)";
                     var speed = 1;
                 }
                 var minutes = 0; // Total number of random points.
