@@ -454,7 +454,7 @@
 <center>
     <h3 id="path_name"></h3>
     <label id="num_cells">Number of Cells: 0</label>
-    <label id="lot" class="col-md-offset-1">Time Elapsed in Minutes: 0</label>
+    <label id="lot" class="col-md-offset-1">Time Elapsed (Minutes): 0</label>
     <label class="col-md-offset-1" for="link">More Info >>> </label><a id="link" href=""></a>
 </center>
 @endsection
