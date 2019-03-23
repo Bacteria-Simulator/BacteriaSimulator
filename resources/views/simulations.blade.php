@@ -156,11 +156,11 @@
                     var msg = " (~10 minutes per second)";
                     var speed = 100;
                 }
-                //else{
-                //    var doublingTime = Number(doubling_time) * Number($("#select-temp :selected").val());
-                //    var msg = " (1 minute per second)";
-                //    var speed = 1;
-                //}
+                else{
+                    var doublingTime = Number(doubling_time) * Number($("#select-temp :selected").val());
+                    var msg = "";
+                    var speed = 1;
+                }
                 var minutes = 0; // Total number of random points.
                 //changing the header based on the pathogen selected.
                 path_name.innerText = $("#select-pathogen :selected").val() + " on " + $("#select-food :selected").val();
