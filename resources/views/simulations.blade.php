@@ -453,7 +453,7 @@
 </div>
 </br>
 <center>
-    <h3 id="path_name"></h3>
+    <h3 id="path_name" style="font-weight:bold;></h3>
     <label id="num_cells">Number of Cells: 0</label>
     <label id="lot" class="col-md-offset-1">Length of Time (Minutes): 0</label>
     <label class="col-md-offset-1" for="link">More Info: </label><a id="link" href=""></a>
