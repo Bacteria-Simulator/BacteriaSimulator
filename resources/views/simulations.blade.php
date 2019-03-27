@@ -6,7 +6,7 @@
         <!-- creates the container that will hold all of the cells that populate.
         the defs/pattern are here to hold the background image.
         the path tag draws a square and fills it with the pattern. -->
-        <svg id="svgtag" width="960" height="500" style="border: 1pt solid black">
+        <svg id="svgtag" width="960" height="500" style="border: 2pt solid rgb(134, 31, 65)">
             <defs>
                 <pattern id="imgpattern" width="1" height="1">
                     <image id="imglink" width="960" height="500"
@@ -22,6 +22,7 @@
         <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <!--<script src="{{ asset('js/simulation.js') }}"></script>-->
         <script>
     //When the page loads, load these jquery functions
@@ -152,12 +153,12 @@
                 //doubling time to keep the animations interesting need to be in the double digits
                 if(doubling_time > 100){
                     var doublingTime = Math.round(Number(doubling_time)/100) * Number($("#select-temp :selected").val()); //the growth rate in minutes
-                    var msg = "(~10 minutes per second)";
+                    var msg = "(NOTE: multiplied by ~100)";
                     var speed = 100;
                 }
                 else{
                     var doublingTime = Number(doubling_time) * Number($("#select-temp :selected").val());
-                    var msg = "(1 minutes per second)";
+                    var msg = "";
                     var speed = 1;
                 }
                 var minutes = 0; // Total number of random points.
@@ -165,7 +166,7 @@
                 path_name.innerText = $("#select-pathogen :selected").val() + " on " + $("#select-food :selected").val();
                 //resets the num cells and length of time tags to 0
                 $("#num_cells").html("Number of Cells: " + cells);
-              //  $("#lot").html("Length of time " + msg + ": " + minutes);
+              //  $("#lot").html("Time Elapsed in Minutes" + msg + ": " + minutes);
                 //giving the svg more variables
                 var svg = d3.select("svg"),
                 margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -226,7 +227,7 @@
                 .attr("transform", "translate(10,20)");
                 var logLegend = d3.legendColor()
                 .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
-                                                .title("Cells\r\nper\r\nHexagon:")
+                                                .title("Cells per Hexagon:")
                                                 .titleWidth(7)
                                                 .labelFormat(d3.format(".0f"))
                 //.scale(log);
@@ -243,7 +244,7 @@
                         else{
                             minutes++;
                             lot = 1;
-                            $("#lot").html("Length of time " + msg + ": " + minutes);
+                            $("#lot").html("Time Elapsed (Minutes) " + msg + ": " + minutes);
                         }
                         //creating a new plot based on the amount of cells
                         points = d3.range(cells).map(function() { return [rx(), ry()]; });
@@ -279,7 +280,7 @@
                                         var duration = (minutes*speed);
                                     swal({
                                         title: 'Food is unsafe to eat!',
-                                        text: "Number of Cells: " + cells + "       Duration: " + duration + " minutes.",
+                                        text: "Number of Cells: " + cells + " Duration: " + duration + " minute(s)",
                                         imageUrl: 'http://www.dadshopper.com/wp-content/uploads/2016/10/21.png',
                                         imageWidth: 210,
                                         imageHeight: 200,
@@ -306,7 +307,7 @@
                             if (cells < infectious_dosage) {
                             swal({
                                 title: 'Food is safe to eat!',
-                                text: "Number of Cells: " + cells + "       Duration: " + duration + " minutes.",
+                                text: "Number of Cells: " + cells + " Duration: " + duration + " minute(s)",
                                 imageUrl: 'https://cdn.shopify.com/s/files/1/1061/1924/products/Slightly_Smiling_Face_Emoji_87fdae9b-b2af-4619-a37f-e484c5e2e7a4_large.png?v=1480481059',
                                 imageWidth: 210,
                                 imageHeight: 200,
@@ -316,7 +317,7 @@
                             else {
                                 swal({
                                         title: 'Food is unsafe to eat!',
-                                        text: "Number of Cells: " + cells + "       Duration: " + duration + " minutes.",
+                                        text: "Number of Cells: " + cells + " Duration: " + duration + " minute(s)",
                                         imageUrl: 'http://www.dadshopper.com/wp-content/uploads/2016/10/21.png',
                                         imageWidth: 210,
                                         imageHeight: 200,
@@ -345,7 +346,11 @@
             }
         });
 });
+
+
 </script>
+
+
 @endsection
 @section('content')
 <div class="container" style="margin-top: 50px;">
@@ -402,8 +407,7 @@
             <!-- Creating the label and input for length of time -->
             <div class="col-md-4">
                 <div class="col-md-7">
-                    <label>Length of Time(seconds):
-                           (1 second = 1 minute)</label>
+                    <label>Length of Time (Minutes):</label>
                 </div>
                 <div class="col-md-1">
                 <!-- represents the length of time in minutes with the min being 1 and max at 1000 -->
@@ -428,8 +432,14 @@
                     <input type="number" name="cells" id="cells" value="1" min="1" max="1001" step="100" style="width: 50px;">
                 </div>
             </div>
-            <input type="radio" id="AltSimulation">Weak Immune System<br>
+            
+            
+             <input type="checkbox" id="AltSimulation">Weak Immune System<br>
         </form>
+        
+   
+        
+        
     </div>
     <!-- Creating the run simulations button -->
     <div>
@@ -444,8 +454,8 @@
 <center>
     <h3 id="path_name"></h3>
     <label id="num_cells">Number of Cells: 0</label>
-    <label id="lot" class="col-md-offset-1">Length of Time (Minutes): 0</label>
-    <label class="col-md-offset-1" for="link">More Info: </label><a id="link" href=""></a>
+    <label id="lot" class="col-md-offset-1">Time Elapsed (Minutes): 0</label>
+    <label class="col-md-offset-1" for="link">More Info>> </label><a id="link" href=""></a>
 </center>
 @endsection
 @section('save_simulation')
