@@ -131,7 +131,7 @@
                 var time = Number($("#time").val());
                 var cells = Number($("#cells").val());
                 var infectious_dosage = $("#select-pathogen :selected").attr("id");
-                     if (document.getElementById("AltSimulation").checked == true){
+                if (document.getElementById("AltSimulation").checked == true){
                              infectious_dosage = infectious_dosage / 2;
                      }
                 var doubling = doubling_time;
@@ -146,6 +146,9 @@
                 //setting the infection dose
                 var doubling_counter = 0;
                 var infectious_dosage = $("#select-pathogen :selected").attr("id");
+                if (document.getElementById("AltSimulation").checked == true){
+                             infectious_dosage = infectious_dosage / 2;
+                     }
                 //setting the image http path
                 var img = $("#select-food :selected").attr("id");
                 //casting the time from user input to a number
