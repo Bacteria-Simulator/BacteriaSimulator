@@ -162,7 +162,8 @@
                 height = +svg.attr("height"),
                 style = +svg.attr("style");
                 var cells = Number(cells), //number of starting cells and total cells
-                infectious_dosage = Number(infectious_dosage), //infectious dose
+                var legend_infectious =  $("#select-pathogen :selected").attr("id");
+                legend_infection = Number(legend_infection), //infectious dose
                 lot = 1; //length of time
                 //doubling time to keep the animations interesting need to be in the double digits
                 if(doubling_time > 100){
@@ -194,7 +195,7 @@
                 background = d3.range(1).map(function() { return [rx(), ry()]; });
                 //setting the color gradient based on infectious dose
                 var color = d3.scaleSequential(d3.interpolateLab("white", "green"))
-                .domain([0, infectious_dosage/100]);
+                .domain([0, legend_infectious/100]);
                 //creating the hexagons
                 var hexbin = d3.hexbin()
                 .radius(20)
@@ -230,17 +231,17 @@
                 .attr("fill", function(d) { return color(d.length); });
                 //adding legend to the svg
                                        var quantize = d3.scaleQuantize()
-                                         .domain([ 1, infectious_dosage/10 ])
+                                         .domain([ 1, legend_infectious/10 ])
                                          .range(["#ffffff", "#80c080", "#59ac59", "#339933", "#008000", "#005400", "#004100"]);
                  var log = d3.scaleLog()
-                .domain([ 1, infectious_dosage/100 ])
+                .domain([ 1, legend_infectious/100 ])
                 .range(["white", "green"]);
                 var svg = d3.select("svg");
                 svg.append("g")
                 .attr("class", "legendLog")                                                
                 .attr("transform", "translate(10,20)");
                 var logLegend = d3.legendColor()
-                .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
+                .cells([0, legend_infectious/1000, legend_infectious/500, legend_infectious/250, legend_infectious/100, legend_infectious/20, legend_infectious/10])
                                                 .title("Cells per Hexagon:")
                                                 .titleWidth(7)
                                                 .labelFormat(d3.format(".0f"))
