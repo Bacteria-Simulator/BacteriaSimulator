@@ -60,6 +60,7 @@
             if (pathogen_name == "Listeria") {
                 document.getElementById("AltSimulation").style.visibility = "visible";
                 document.getElementById("immuneSystemLabel").style.visibility = "visible";
+                document.getElementById("lot").innerHTML = "Time Elapsed (Minutes)(NOTE: multiplied by ~100): 0";
             } else {
                 document.getElementById("AltSimulation").style.visibility = "hidden";
                 document.getElementById("immuneSystemLabel").style.visibility = "hidden";
