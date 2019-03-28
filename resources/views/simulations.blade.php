@@ -161,7 +161,6 @@
                 height = +svg.attr("height"),
                 style = +svg.attr("style");
                 var cells = Number(cells), //number of starting cells and total cells
-                infectious_dosage = infectious_dosage * 2; //changing the infectious dosage 
                 infectious_dosage = Number(infectious_dosage), //infectious dose
                 lot = 1; //length of time
                 //doubling time to keep the animations interesting need to be in the double digits
