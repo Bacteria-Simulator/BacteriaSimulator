@@ -25,6 +25,7 @@
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <!--<script src="{{ asset('js/simulation.js') }}"></script>-->
         <script>
+        document.getElementById("AltSimulation").disabled = true; // checkbox isn't visible until "Listeria" is selected
     //When the page loads, load these jquery functions
     $(document).ready(function() {
         var visible = <?php echo $visible; ?>;
@@ -55,6 +56,11 @@
                     return doubling_time = data.formula;
                 }
             });
+            if (pathogen_name == "Listeria") {
+                document.getElementById("AltSimulation").disabled = false;
+            } else {
+                document.getElementById("AltSimulation").disabled = true;
+            }
         });
         /*
         //creating a saved simulation database entry through ajax based on the selected input.
