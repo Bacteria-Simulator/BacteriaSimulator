@@ -163,7 +163,7 @@
                 style = +svg.attr("style");
                 var cells = Number(cells), //number of starting cells and total cells
                 var legend_infectious =  $("#select-pathogen :selected").attr("id");
-                legend_infectious = Number(legend_infectious), //infectious dose
+                legend_infectious = Number(legend_infectious); //infectious dose
                 lot = 1; //length of time
                 //doubling time to keep the animations interesting need to be in the double digits
                 if(doubling_time > 100){
