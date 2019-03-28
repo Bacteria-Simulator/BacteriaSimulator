@@ -57,7 +57,7 @@
                     return doubling_time = data.formula;
                 }
             });
-            if (pathogen_name == "Listeria") {
+            if (pathogen_name == "Listeria") { 
                 document.getElementById("AltSimulation").style.visibility = "visible";
                 document.getElementById("immuneSystemLabel").style.visibility = "visible";
                 document.getElementById("lot").innerHTML = "Time Elapsed (Minutes)(NOTE: multiplied by ~100): 0";
@@ -65,7 +65,7 @@
                 document.getElementById("AltSimulation").style.visibility = "hidden";
                 document.getElementById("immuneSystemLabel").style.visibility = "hidden";
                 document.getElementById("lot").innerHTML = "Time Elapsed (Minutes): 0";
-            }
+            } //changed visibility of the checkbox just for listeria
         });
         /*
         //creating a saved simulation database entry through ajax based on the selected input.
@@ -131,9 +131,7 @@
                 var time = Number($("#time").val());
                 var cells = Number($("#cells").val());
                 var infectious_dosage = $("#select-pathogen :selected").attr("id");
-                if (document.getElementById("AltSimulation").checked == true){
-                             infectious_dosage = infectious_dosage / 2;
-                     }
+                if (document.getElementById("AltSimulation").checked == true){infectious_dosage = infectious_dosage / 2;}
                 var doubling = doubling_time;
                 var growth_rate = $("#select-temp :selected").val();
                 $.ajax({
@@ -146,9 +144,7 @@
                 //setting the infection dose
                 var doubling_counter = 0;
                 var infectious_dosage = $("#select-pathogen :selected").attr("id");
-                if (document.getElementById("AltSimulation").checked == true){
-                             infectious_dosage = infectious_dosage / 2;
-                     }
+                if (document.getElementById("AltSimulation").checked == true){infectious_dosage = infectious_dosage / 2;}
                 //setting the image http path
                 var img = $("#select-food :selected").attr("id");
                 //casting the time from user input to a number
@@ -165,6 +161,7 @@
                 height = +svg.attr("height"),
                 style = +svg.attr("style");
                 var cells = Number(cells), //number of starting cells and total cells
+                infectious_dosage = infectious_dosage * 2; //changing the infectious dosage 
                 infectious_dosage = Number(infectious_dosage), //infectious dose
                 lot = 1; //length of time
                 //doubling time to keep the animations interesting need to be in the double digits
