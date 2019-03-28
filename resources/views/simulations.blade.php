@@ -131,6 +131,9 @@
                 var time = Number($("#time").val());
                 var cells = Number($("#cells").val());
                 var infectious_dosage = $("#select-pathogen :selected").attr("id");
+                     if (document.getElementById("AltSimulation").checked == true){
+                             infectious_dosage = infectious_dosage / 2;
+                     }
                 var doubling = doubling_time;
                 var growth_rate = $("#select-temp :selected").val();
                 $.ajax({
