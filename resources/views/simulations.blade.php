@@ -435,7 +435,7 @@
             <!-- checkbox for weak immune system simulation -->
             <div class="col-md-4">
                 <div class="col-md-5" style="margin-right: 15px">
-                    <label>60+ Senior/Pregnancy/Weak Immune System:</label>
+                    <label>Senior/Pregnancy/Weak Immune System:</label>
                 </div>
                 <div class="col-md-2" style="margin-right: 15px">
                     <input type="checkbox" name="AltSimulation" id="AltSimulation">
