@@ -25,7 +25,8 @@
         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <!--<script src="{{ asset('js/simulation.js') }}"></script>-->
         <script>
-        document.getElementById("AltSimulation").disabled = true; // checkbox isn't visible until "Listeria" is selected
+        document.getElementById("AltSimulation").style.visibility = "hidden"; // checkbox isn't visible until "Listeria" is selected
+        document.getElementById("immuneSystemLabel").style.visibility = "hidden"; // checkbox label isn't visible until "Listeria" is selected
     //When the page loads, load these jquery functions
     $(document).ready(function() {
         var visible = <?php echo $visible; ?>;
@@ -57,9 +58,11 @@
                 }
             });
             if (pathogen_name == "Listeria") {
-                document.getElementById("AltSimulation").disabled = false;
+                document.getElementById("AltSimulation").style.visibility = "visible";
+                document.getElementById("immuneSystemLabel").style.visibility = "visible";
             } else {
-                document.getElementById("AltSimulation").disabled = true;
+                document.getElementById("AltSimulation").style.visibility = "hidden";
+                document.getElementById("immuneSystemLabel").style.visibility = "hidden";
             }
         });
         /*
@@ -441,7 +444,7 @@
             <!-- checkbox for weak immune system simulation -->
             <div class="col-md-4">
                 <div class="col-md-5" style="margin-right: 15px">
-                    <label>Senior/Pregnancy/Weak Immune System:</label>
+                    <label id="immuneSystemLabel">Senior/Pregnancy/Weak Immune System:</label>
                 </div>
                 <div class="col-md-2" style="margin-right: 15px">
                     <input type="checkbox" name="AltSimulation" id="AltSimulation">
