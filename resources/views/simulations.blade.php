@@ -64,6 +64,7 @@
             } else {
                 document.getElementById("AltSimulation").style.visibility = "hidden";
                 document.getElementById("immuneSystemLabel").style.visibility = "hidden";
+                document.getElementById("lot").innerHTML = "Time Elapsed (Minutes): 0";
             }
         });
         /*
@@ -163,7 +164,7 @@
                 //doubling time to keep the animations interesting need to be in the double digits
                 if(doubling_time > 100){
                     var doublingTime = Math.round(Number(doubling_time)/100) * Number($("#select-temp :selected").val()); //the growth rate in minutes
-                    var msg = "(NOTE: multiplied by ~100)";
+                    var msg = "";
                     var speed = 100;
                 }
                 else{
