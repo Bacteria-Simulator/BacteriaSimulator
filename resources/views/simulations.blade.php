@@ -432,9 +432,15 @@
                     <input type="number" name="cells" id="cells" value="1" min="1" max="1001" step="100" style="width: 50px;">
                 </div>
             </div>
-            
-            
-             <input type="checkbox" id="AltSimulation">Weak Immune System<br>
+            <!-- checkbox for weak immune system simulation -->
+            <div class="col-md-4">
+                <div class="col-md-5" style="margin-right: 15px">
+                    <label>Weak Immune System:</label>
+                </div>
+                <div class="col-md-2" style="margin-right: 15px">
+                    <input type="checkbox" name="AltSimulation" id="AltSimulation">
+                </div>
+            </div>
         </form>
         
    
