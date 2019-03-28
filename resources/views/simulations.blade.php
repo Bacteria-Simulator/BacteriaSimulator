@@ -63,7 +63,7 @@
                 document.getElementById("lot").innerHTML = "Time Elapsed (Minutes)(NOTE: multiplied by ~100): 0";
             } else {
                 document.getElementById("AltSimulation").style.visibility = "hidden";
-                document.getElemetById("AltSimulation").checked = false;
+                document.getElementById("AltSimulation").checked = false;
                 document.getElementById("immuneSystemLabel").style.visibility = "hidden";
                 document.getElementById("lot").innerHTML = "Time Elapsed (Minutes): 0";
             } //changed visibility of the checkbox just for listeria
