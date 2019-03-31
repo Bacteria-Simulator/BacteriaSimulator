@@ -132,6 +132,7 @@
                 var time = Number($("#time").val());
                 var cells = Number($("#cells").val());
                 var infectious_dosage = $("#select-pathogen :selected").attr("id");
+                       var legend_dose = infectious_dosage;
                 if (document.getElementById("AltSimulation").checked == true){infectious_dosage = infectious_dosage / 2;}
                 var doubling = doubling_time;
                 var growth_rate = $("#select-temp :selected").val();
@@ -145,6 +146,7 @@
                 //setting the infection dose
                 var doubling_counter = 0;
                 var infectious_dosage = $("#select-pathogen :selected").attr("id");
+                         var legend_dose = infectious_dosage;
                 if (document.getElementById("AltSimulation").checked == true){infectious_dosage = infectious_dosage / 2;}
                 //setting the image http path
                 var img = $("#select-food :selected").attr("id");
@@ -164,6 +166,7 @@
                 var cells = Number(cells), //number of starting cells and total cells
                 //var legend_infectious =  $("#select-pathogen :selected").attr("id");
                 infectious_dosage = Number(infectious_dosage); //infectious dose
+                        legend_dose = Number(legend_dose);
                 lot = 1; //length of time
                 //doubling time to keep the animations interesting need to be in the double digits
                 if(doubling_time > 100){
@@ -195,7 +198,7 @@
                 background = d3.range(1).map(function() { return [rx(), ry()]; });
                 //setting the color gradient based on infectious dose
                 var color = d3.scaleSequential(d3.interpolateLab("white", "green"))
-                .domain([0, infectious_dosage/100]);
+                .domain([0, legend_dose/100]);
                 //creating the hexagons
                 var hexbin = d3.hexbin()
                 .radius(20)
@@ -231,7 +234,7 @@
                 .attr("fill", function(d) { return color(d.length); });
                 //adding legend to the svg
                                        var quantize = d3.scaleQuantize()
-                                         .domain([ 1, infectious_dosage/10 ])
+                                         .domain([ 1, legend_dose/10 ])
                                          .range(["#ffffff", "#80c080", "#59ac59", "#339933", "#008000", "#005400", "#004100"]);
                  var log = d3.scaleLog()
                 .domain([ 1, infectious_dosage/100 ])
@@ -241,7 +244,7 @@
                 .attr("class", "legendLog")                                                
                 .attr("transform", "translate(10,20)");
                 var logLegend = d3.legendColor()
-                .cells([0, infectious_dosage/1000, infectious_dosage/500, infectious_dosage/250, infectious_dosage/100, infectious_dosage/20, infectious_dosage/10])
+                .cells([0, legend_dose/1000, legend_dose/500, legend_dose/250, legend_dose/100, legend_dose/20, legend_dose/10])
                                                 .title("Cells per Hexagon:")
                                                 .titleWidth(7)
                                                 .labelFormat(d3.format(".0f"))
