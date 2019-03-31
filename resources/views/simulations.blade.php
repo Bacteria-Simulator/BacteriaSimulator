@@ -198,7 +198,7 @@
                 background = d3.range(1).map(function() { return [rx(), ry()]; });
                 //setting the color gradient based on infectious dose
                 var color = d3.scaleSequential(d3.interpolateLab("white", "green"))
-                .domain([0, legend_dose/100]);
+                .domain([0, legend_dose/10]);
                 //creating the hexagons
                 var hexbin = d3.hexbin()
                 .radius(20)
