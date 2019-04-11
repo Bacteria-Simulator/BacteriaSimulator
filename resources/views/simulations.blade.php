@@ -68,11 +68,11 @@
                 document.getElementById("lot").innerHTML = "Time Elapsed (Minutes): 0";
             } //changed visibility of the checkbox just for listeria
             if (pathogen_name == "Campylobacter") {
-                document.getElementById("select-food").options[1].hidden = true;
                 document.getElementById("select-food").options[2].hidden = true;
+                document.getElementById("select-food").options[3].hidden = true;
             } else {
-                document.getElementById("select-food").options[1].hidden = false;
                 document.getElementById("select-food").options[2].hidden = false;
+                document.getElementById("select-food").options[3].hidden = false;
             } //changed visibility of the campylobacter to only infect what it actually can
         });
         /*
