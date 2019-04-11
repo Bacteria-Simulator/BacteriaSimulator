@@ -67,6 +67,13 @@
                 document.getElementById("immuneSystemLabel").style.visibility = "hidden";
                 document.getElementById("lot").innerHTML = "Time Elapsed (Minutes): 0";
             } //changed visibility of the checkbox just for listeria
+            if (pathogen_name == "Campylobacter") {
+                document.getElementById("select-food").options[1].hidden = true;
+                document.getElementById("select-food").options[2].hidden = true;
+            } else {
+                document.getElementById("select-food").options[1].hidden = false;
+                document.getElementById("select-food").options[2].hidden = false;
+            } //changed visibility of the campylobacter to only infect what it actually can
         });
         /*
         //creating a saved simulation database entry through ajax based on the selected input.
